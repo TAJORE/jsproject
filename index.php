@@ -28,7 +28,7 @@
         </div>
     </li>
     <li class="dropdown">
-        <span href="javascript:void(0)" class="dropbtn" class="dropbtn" id="inscript" onclick="changer_inscript()">Inscription</span>
+        <span href="https://www.w3schools.com/js/default.asp" class="dropbtn" class="dropbtn" id="inscript" onclick="changer_inscript()">Inscription</span>
         <div class="dropdown-content">
             <a href="#">Yaounde Campus</a>
             <a href="#">Douala Campus</a>
@@ -38,7 +38,7 @@
         </div>
     </li>
     <li class="dropdown">
-        <span href="javascript:void(0)" class="dropbtn" class="dropbtn" id="tuto" onclick="changer_tuto()">Tutoriel JS </span>
+        <a  class="dropbtn" class="dropbtn" id="tuto" onclick="changer_tuto()" href=" https://www.w3schools.com/code/tryit.asp?filename=FJJ5RJH9ADAK">Tutoriel JS </a>
         <div class="dropdown-content">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
