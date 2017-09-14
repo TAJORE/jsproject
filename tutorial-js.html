@@ -65,11 +65,45 @@
 </script>
 <p>10) utilisation de la concaténation pour additionner deux chaines de caractères</p>
 <p id="jour"></p>
-<script>
+    <script>
     txte1 = "quel ";
     txte1 += "beau jour";
     document.getElementById("jour").innerHTML = txte1;
+    </script>
+<p>11) operateur  /= (10/5) </p>
+<p id="operateurs"></p>
+<script>
+    var x = 10;
+    x /=5;
+    document.getElementById("operateurs").innerHTML = x;
 </script>
+
+<p>12) operateur  += (10+5)</p>
+<p id="operateur_plus"></p>
+<script>
+    var x = 10;
+    x += 10;
+    document.getElementById("operateur_plus").innerHTML = x;
+</script>
+<p>13) affichage des elements contenu dans un tableau  [0] représente le premier element du tableau.</p>
+
+<p id="tableau"></p>
+<script>
+    var mois = ["janvier","fevrier","mars"];
+
+    document.getElementById("tableau").innerHTML = mois[2];
+</script>
+
+<p>14) appel de fonction pour faire la multiplication     //maFunction(4, 3)</p>
+
+<p id="multiplication"></p>
+
+    <script>
+        function maFunction(a, b) {
+        return a * b;
+        }
+        document.getElementById("multiplication").innerHTML = maFunction(4, 3);
+    </script>
 </body>
 <script src="tutorial-js.js"></script>
 </html>
