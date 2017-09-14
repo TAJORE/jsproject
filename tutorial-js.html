@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>External JavaScript</h2>
+
+<p id="demo">1) A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Click here to to see</button>
+
+<p>(myFunction is stored in an external file called "myScript.js")</p>
+
+<p>2) 99 remainder 30 equal to:</p>
+
+<p id="modulo"></p>
+
+<script>
+    var x = 99;
+    x %= 30;
+    document.getElementById("modulo").innerHTML = x;
+</script>
+<p>3) the result is below.</p>
+<p id="display">3) the result is result here.</p>
+
+<script>
+
+    function myFunction() {
+        document.getElementById("display").innerHTML= "javascript is very fun!";
+    }
+    myFunction();
+</script>
+</body>
+<script src="https://www.w3schools.com/js/myScript.js"></script>
+</html>
