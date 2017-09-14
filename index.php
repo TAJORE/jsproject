@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="school.css" />
     <ul>
         <li class="dropdown">
-            <span href="" class="dropbtn" id="change-color-admission" onClick="admission()">Admissions</span>
+            <span href="" class="dropbtn" id="changer-couleur-admission" onClick="admission()">Admissions</span>
             <div class="dropdown-content">
                 <a href="#">Level 1</a>
                 <a href="#">Level 2</a>
@@ -15,7 +15,7 @@
             </div>
         </li>
         <li class="dropdown">
-            <span href="" class="dropbtn" class="dropbtn" id="change-color-program" onClick="program()">Programs</span>
+            <span href="" class="dropbtn"  id="change-couleur-program" onClick="program()">Programs</span>
             <div class="dropdown-content">
                 <a href="#">Level 1</a>
                 <a href="#">Level 2</a>
@@ -25,8 +25,7 @@
             </div>
         </li>
         <li class="dropdown">
-            <span href="https://www.w3schools.com/js/default.asp" class="dropbtn" class="dropbtn"  id="change-color-inscription"
-                  onClick="inscription()">Inscription</span>
+            <span  class="dropbtn"   id="changer-couleurr-inscription" onClick="inscription()">Inscription</span>
             <div class="dropdown-content">
                 <a href="#">Yaounde Campus</a>
                 <a href="#">Douala Campus</a>
@@ -36,7 +35,7 @@
             </div>
         </li>
         <li class="dropdown">
-            <a  class="dropbtn" class="dropbtn"   href="tutorial-js.html" id="change-color-tuto" onClick="tuto()">Tutoriel JS </a>
+            <a  class="dropbtn"    href="tutorial-js.html" id="changer-couleur-tuto" onClick="tuto()">Tutoriel JS </a>
             <div class="dropdown-content">
                 <a href="#">Link 1</a>
                 <a href="#">Link 2</a>

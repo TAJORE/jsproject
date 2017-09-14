@@ -2,15 +2,14 @@
 <html>
 <body>
 
-<h2>External JavaScript</h2>
+<h2>TUTO JS </h2>
 
-<p id="demo">1) A Paragraph.</p>
+<p id="demo">1) un  Paragraphe.</p>
 
-<button type="button" onclick="myFunction()">Click here to to see</button>
+<button type="button" onclick="myFunction()">Cliquer ici pour voir</button>
 
-<p>(myFunction is stored in an external file called "myScript.js")</p>
 
-<p>2) 99 remainder 30 equal to:</p>
+<p>2) 99 modulo 30 egal à:</p>
 
 <p id="modulo"></p>
 
@@ -19,16 +18,51 @@
     x %= 30;
     document.getElementById("modulo").innerHTML = x;
 </script>
-<p>3) the result is below.</p>
-<p id="display">3) the result is result here.</p>
+<p>3) le resultat est ci-dessous.</p>
+<p id="display">3) le resultat est ici.</p>
 
 <script>
 
     function myFunction() {
-        document.getElementById("display").innerHTML= "javascript is very fun!";
+        document.getElementById("display").innerHTML= "javascript est vraiment cool!";
     }
     myFunction();
 </script>
+<p>4)
+    afficher un texte avec une fonction qui prend le nom en paramètre.
+</p>
+<p id="affichage_nom">
+    4) afficher un texte avec une fonction.
+</p>
+<p> 5)
+    changer le style d'un element html avec js
+</p>
+<p id="changer_style">
+    changer le style d'un element html avec js
+</p>
+<button type="button" onclick="document.getElementById('changer_style').style.fontSize='35px'">
+    Cliquer ici pour voir!
+</button>
+<p>6) javaScript peut etre utilisé pour changer un texte.</p>
+
+<p id="changer_texte">
+    JavaScript peut etre utilisé pour changer un texte.
+</p>
+<button type="button" onclick='document.getElementById("changer_texte").innerHTML = "bonjour JavaScript!"'>
+    Cliquer ici pour voir!
+</button>
+<p>7)JavaScript peut etre utilisé pour cacher un texte.</p>
+<p id="cacher_textes" style="display:none">bonjour JavaScript!</p>
+<button type="button" onclick="document.getElementById('cacher_textes').style.display='block'">Cliquer ici!
+</button>
+<p>8)utilisation de document.write() pour faire la somme 5+6</p>
+<script>
+    document.write(5 + 6);
+</script>
+<p>9)utilisation de console.log() pour faire la somme 5+6</p>
+<script>
+    console.log(5 + 6);
+</script>
 </body>
-<script src="https://www.w3schools.com/js/myScript.js"></script>
+<script src="tutorial-js.js"></script>
 </html>
