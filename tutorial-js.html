@@ -6,7 +6,7 @@
 
 <p id="demo">1) un  Paragraphe.</p>
 
-<button type="button" onclick="myFunction()">Cliquer ici pour voir</button>
+<button type="button" onclick="maFunction1()">Cliquer ici pour voir</button>
 
 
 <p>2) 99 modulo 30 egal à:</p>
@@ -23,10 +23,10 @@
 
 <script>
 
-    function myFunction() {
+    function maFunction() {
         document.getElementById("display").innerHTML= "javascript est vraiment cool!";
     }
-    myFunction();
+    maFunction();
 </script>
 <p>4)
     afficher un texte avec une fonction qui prend le nom en paramètre.
@@ -104,6 +104,43 @@
         }
         document.getElementById("multiplication").innerHTML = maFunction(4, 3);
     </script>
+<p>15) Creation d'un objet voiture en javascript et affichage du type de voiture.</p>
+<p id="voitures"></p>
+<script>
+    var voiture = {type:"toyota", modele:"92", couleur:"rouge"};
+    document.getElementById("voitures").innerHTML = voiture.type;
+</script>
+<p>16) formulaire avec js</p>
+
+<form name="monFormulaire" action="tutorial-js.html"
+      onsubmit="return formulaire_validation()" method="post">
+    Nom: <input type="text" name="nomformulaire">
+    <input type="submit" value="Soummetre">
+</form>
+
+<p>17) validation de la valeur saisie dans un form js, veuillez entrer un nombre entre  19 et  84:</p>
+
+ Entrer un Nombre<input id="nombree">
+
+<button type="button" onclick="form_Fonction()">Soummetre</button>
+<script>
+    function form_Fonction() {
+        var x;
+
+
+        //on recupère ici le nombre saisie dans l'input pour stocker dans x
+        x = document.getElementById("nombree").value;
+
+
+        //on test ici si ce que le user a entré est correct
+        if (isNaN(x) || x < 19 || x > 84) {
+            alert("la valeur eentrée ne correspond pas à l'intervalle");
+        } else {
+            alert("felicitations la valeur correspond à l'intervalle!!!");
+        }
+
+    }
+</script>
 </body>
 <script src="tutorial-js.js"></script>
 </html>
