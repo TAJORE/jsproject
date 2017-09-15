@@ -45,8 +45,23 @@
     </ul>
 </head>
     <body>
-  <div id="contenu">
+  
+  <div id="premier_contenu">
+      test3
+  </div>
+  <div id="deuxieme_contenu">
+      test3
+  </div>
+  <div id="troisieme_contenu">
+      test3
+  </div>
+  <div class="footer_top">
        test
+  </div>
+  <div class="footer_container">
+      <div class="bottom">Large footer bottom titre 1</div>
+      <div class="bottom">Large footer bottom titre 2</div>
+      <div class="bottom">Large footer bottom titre 3</div>
   </div>
 </body>
 <script src="school.js"></script>

@@ -52,3 +52,35 @@ display: block;
 #contenu{
     background-color: bisque;
 }
+    .footer_container {
+
+        display: flex;
+        width: 100%;
+        height: 250px;
+        margin-bottom: 0;
+        margin-right: 0;
+
+    }
+
+    .bottom {
+        background-color: #222A35;
+        width: 450px;
+        height: 250px;
+        margin: 0.5px;
+
+    }
+    .footer_top{
+        background-color: #323E3F;
+        height: 38px;
+    }
+    #troisieme_contenu{
+        background-color: #D0CECE;
+        height: 150px;
+    }
+    #deuxieme_contenu{
+        height: 120px;
+    }
+    #premier_contenu{
+        background-color: #D0CECE;
+        height: 150px;
+    }
