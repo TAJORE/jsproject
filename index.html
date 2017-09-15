@@ -6,7 +6,14 @@
     <title>school project</title>
     <ul>
         <li class="dropdown">
-            <span href="" class="dropbtn" id="changer-couleur-admission" onClick="admission()">Admissions</span>
+            <a  href="index.html" class="dropbtn"     id="changer-couleur-accueil"
+                onmouseover="accueil(); reset_bg_sauf_accueil()"
+                onClick="accueil(); reset_bg_sauf_accueil()">Home </a>
+        </li>
+        <li class="dropdown">
+            <span href="" class="dropbtn" id="changer-couleur-admission"
+                  onmouseover="admission(); reset_bg_sauf_admission()"
+                  onClick="admission(); reset_bg_sauf_admission()">Admissions</span>
             <div class="dropdown-content">
                 <a href="#">Level 1</a>
                 <a href="#">Level 2</a>
@@ -16,7 +23,9 @@
             </div>
         </li>
         <li class="dropdown">
-            <span href="" class="dropbtn"  id="change-couleur-program" onClick="program()">Programs</span>
+            <span href="" class="dropbtn"  id="changer-couleur-program"
+                  onmouseover="program(); reset_bg_sauf_program()"
+                  onClick="program(); reset_bg_sauf_program()">Programs</span>
             <div class="dropdown-content">
                 <a href="#">Level 1</a>
                 <a href="#">Level 2</a>
@@ -26,7 +35,9 @@
             </div>
         </li>
         <li class="dropdown">
-            <span  class="dropbtn"   id="changer-couleurr-inscription" onClick="inscription()">Inscription</span>
+            <span href="" class="dropbtn"   id="changer-couleur-inscription"
+                   onmouseover="inscription(); reset_bg_sauf_inscription()"
+                   onClick="inscription(); reset_bg_sauf_inscription()">Inscription</span>
             <div class="dropdown-content">
                 <a href="#">Yaounde Campus</a>
                 <a href="#">Douala Campus</a>
@@ -36,7 +47,9 @@
             </div>
         </li>
         <li class="dropdown">
-            <a  class="dropbtn"    href="tutorial-js.html" id="changer-couleur-tuto" onClick="tuto()">Tutoriel JS </a>
+            <a  class="dropbtn"    href="tutorial-js.html" id="changer-couleur-tuto"
+                onmouseover="tuto(); reset_bg_sauf_tuto()"
+                onClick="tuto(); reset_bg_sauf_tuto()">Tutoriel JS </a>
             <div class="dropdown-content">
                 <a href="#">Link 1</a>
                 <a href="#">Link 2</a>
