@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="school.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>school project</title>
+    <?php include "nav.html";?>
+</head>
 <body>
 
 <h2>TUTO JS </h2>
@@ -65,11 +72,11 @@
 </script>
 <p>10) utilisation de la concaténation pour additionner deux chaines de caractères</p>
 <p id="jour"></p>
-    <script>
+<script>
     txte1 = "quel ";
     txte1 += "beau jour";
     document.getElementById("jour").innerHTML = txte1;
-    </script>
+</script>
 <p>11) operateur  /= (10/5) </p>
 <p id="operateurs"></p>
 <script>
@@ -98,12 +105,12 @@
 
 <p id="multiplication"></p>
 
-    <script>
-        function maFunction(a, b) {
+<script>
+    function maFunction(a, b) {
         return a * b;
-        }
-        document.getElementById("multiplication").innerHTML = maFunction(4, 3);
-    </script>
+    }
+    document.getElementById("multiplication").innerHTML = maFunction(4, 3);
+</script>
 <p>15) Creation d'un objet voiture en javascript et affichage du type de voiture.</p>
 <p id="voitures"></p>
 <script>
@@ -112,7 +119,7 @@
 </script>
 <p>16) formulaire avec js</p>
 
-<form name="monFormulaire" action="tutorial-js.html"
+<form name="monFormulaire" action="tutorial-js.php"
       onsubmit="return formulaire_validation()" method="post">
     Nom: <input type="text" name="nomformulaire">
     <input type="submit" value="Soummetre">
@@ -120,7 +127,7 @@
 
 <p>17) validation de la valeur saisie dans un form js, veuillez entrer un nombre entre  19 et  84:</p>
 
- Entrer un Nombre<input id="nombree">
+Entrer un Nombre<input id="nombree">
 
 <button type="button" onclick="form_Fonction()">Soummetre</button>
 <script>
