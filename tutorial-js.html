@@ -200,6 +200,33 @@ Entrer un Nombre<input id="nombree">
 
     }
 </script>
+
+<p>18) multiplication</p>
+<p id="test"></p>
+<script>
+    function fonction_form(valeur1, valeur2) {
+        var valeur1 = document.forms["monForm"]["prmiere_valeur"].value;
+        var valeur2 = document.forms["monForm"]["deuxieme_valeur"].value;
+
+        return valeur1*valeur2;
+    }
+</script>
+
+<form name="monForm"
+      onsubmit="return fonction_form()" method="post">
+    Entrer le premier nombre: <input type="text" name="prmiere_valeur"></br>
+    Entrer le second  nombre: <input type="text" name="deuxieme_valeur"></br>
+    <input type="submit" value="Submit"></br>
+    Resultat: <input type="text" name="total"></br>
+</form>
+<div class="footer_top">
+    test
+</div>
+<div class="footer_container">
+    <div class="bottom">Large footer bottom titre 1</div>
+    <div class="bottom">Large footer bottom titre 2</div>
+    <div class="bottom">Large footer bottom titre 3</div>
+</div>
 </body>
 <script src="tutorial-js.js"></script>
 <script src="school.js"></script>
