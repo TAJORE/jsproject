@@ -208,6 +208,11 @@ Entrer un Nombre<input id="nombree">
         var valeur1 = document.forms["monForm"]["prmiere_valeur"].value;
         var valeur2 = document.forms["monForm"]["deuxieme_valeur"].value;
         var result = valeur1*valeur2;
+
+        if (isNaN(result) || result > 1000000){
+            document.getElementById("erreur").innerHTML ="syntax error";
+        }
+        else
         document.getElementById("resultat").innerHTML =result;
     }
 </script>
@@ -216,7 +221,7 @@ Entrer un Nombre<input id="nombree">
     Entrer le premier nombre: <input type="text" name="prmiere_valeur"></br>
     Entrer le second  nombre: <input type="text" name="deuxieme_valeur"></br>
     <input type="button" value="Resultat" onclick="fonction_form()"></br>
-    Resultat: <div id="resultat"></div>
+    Resultat: <div id="resultat"></div><div id="erreur"></div>
 </form>
 <div class="footer_top">
     test
