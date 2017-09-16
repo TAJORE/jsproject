@@ -212,10 +212,10 @@ Entrer un Nombre<input id="nombree">
     }
 </script>
 
-<form onsubmit="fonction_form()" method="post">
+<form  name="monForm">
     Entrer le premier nombre: <input type="text" name="prmiere_valeur"></br>
     Entrer le second  nombre: <input type="text" name="deuxieme_valeur"></br>
-    <input type="submit" value="Resultat"></br>
+    <input type="button" value="Resultat" onclick="fonction_form()"></br>
     Resultat: <div id="resultat"></div>
 </form>
 <div class="footer_top">
