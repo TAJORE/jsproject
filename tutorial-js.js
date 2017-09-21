@@ -13,3 +13,6 @@ function formulaire_validation() {
         return false;
     }
 }
+
+//3
+

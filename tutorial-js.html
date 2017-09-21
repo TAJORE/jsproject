@@ -202,7 +202,7 @@ Entrer un Nombre<input id="nombree">
 </script>
 
 <p>18) multiplication</p>
-<p id="test"></p>
+
 <script>
     function fonction_form() {
         var valeur1 = document.forms["monForm"]["prmiere_valeur"].value;
@@ -210,18 +210,34 @@ Entrer un Nombre<input id="nombree">
         var result = valeur1*valeur2;
 
         if (isNaN(result) || result > 1000000){
-            document.getElementById("erreur").innerHTML ="syntax error";
+            document.getElementById("erreur").innerHTML =" erreur ce nombre est très grand, veuillez entrer un plus petit!";
+            document.getElementById("erreur").style.display = "block";
         }
         else
-        document.getElementById("resultat").innerHTML =result;
+            document.getElementById("resultat").innerHTML =result;
     }
 </script>
-
 <form  name="monForm">
     Entrer le premier nombre: <input type="text" name="prmiere_valeur"></br>
     Entrer le second  nombre: <input type="text" name="deuxieme_valeur"></br>
     <input type="button" value="Resultat" onclick="fonction_form()"></br>
-    Resultat: <div id="resultat"></div><div id="erreur"></div>
+    Resultat: <div id="resultat"></div>
+    <div class="error" id="erreur">
+    </div>
+</form>
+<p>19) concatenation</p>
+<script>
+    function concat_form(){
+        var mot1 = document.forms["concatForm"]["premier_mot"].value;
+        var mot2 = document.forms["concatForm"]["premier_mot"].value;
+        document.getElementById("concat").innerHTML =  mot1 + "" +  mot2;
+    }
+</script>
+<form name="concatForm">
+    Entrer le premier mot: <input type="text" name="premiere_valeur"></br>
+    Entrer le deuxieme mot: <input type="text" name="deuxieme_valeur"></br>
+    <input type="button" value="Submit" onclick="concat_form()"></br>
+    Resultat: <div id="concat"></div>
 </form>
 <div class="footer_top">
     test

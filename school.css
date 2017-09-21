@@ -67,6 +67,7 @@ li.dropdown {
     .footer_top{
         background-color: #323E3F;
         height: 38px;
+        margin-top: 50px;
     }
     #troisieme_contenu{
         background-color: #D0CECE;
@@ -79,4 +80,17 @@ li.dropdown {
         background-color: #D0CECE;
         height: 150px;
     }
-
+.error{
+    background-color: #F2DEDF;
+    height: 40px ;
+    width: 600px;
+    color: #9B4455;
+    .erreur1{
+    color: #A2404E;
+    width: 80px;
+}
+    .erreur2{
+    color: #B17880;
+    width: 300px;
+}
+}
