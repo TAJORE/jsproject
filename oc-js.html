@@ -7,6 +7,15 @@
 </head>
 <body>
 <script>
+    //0
+    var etage = parseInt(prompt("entrer l'étage ou l'ascenseur doit se rendre (de -2 à 30):"));
+    if (etage == 0){
+        alert('vous vous trouvez deja au rdc');
+    } else if (-2 <= etage && etage <= 30){
+        alert("direction etage N0:" + etage + '!');
+    }else {
+        alert("l'étage spécifié n'existe pas");
+    }
     //1
     alert('hello world');
     //2
@@ -26,7 +35,60 @@
     resultat = true && true;
     alert(resultat);
     //6
-    
+    if (confirm('voulez-vous exécuté le js de cette page?')){
+        alert('le code a bien été éxécuté');
+    }
+    //7
+    var tiroir = parseInt(prompt('choisissez le tiroir à ouvir (entre 1 et 4)'));
+    switch (tiroir){
+        case 1:
+            alert("contient les outils informatiques");
+            break;
+        case 2:
+            alert("contient les outils de dessins");
+            break;
+        case 3:
+            alert("contient des rams");
+            break;
+        case 4:
+            alert("contient des cahiers");
+            break;
+        default :
+            alert("entrer une valeur comprise entre 1 et 4");
+    }
+    //8
+    var debut = 'votre catégorie :', fin, adulte = confirm('etes vous majeur');
+    fin = adulte ? '18+' : '-18';
+    alert(debut + fin);
+    //9
+    var age = parseInt(prompt('entrer votre age(1-120):'));
+    if (age> 0 & age <18){
+        alert("mineur");
+    }else if (age> 17 & age <50){
+        alert("majeur");
+    }else if (age>49 & age <60){
+        alert("senior");
+    } else if  (age> 59 & age <121){
+        alert("retraite");
+    } else {
+        alert("veuillez entrer un age dans l' intervvalle 1-120");
+    }
+    //10 boucle while
+    var nombre = 1;
+    while (nombre<10){
+        nombre++;
+    }
+    alert(nombre);
+    //11
+    var nicks = '', nick, proceed = true;
+    while (proceed){
+        nick = prompt('entrer un prénom:');
+        if (nick) {
+            nicks += nick + ' ';
+        } else {
+            proceed = false;
+        }
+    }
 
 </script>
 </body>
