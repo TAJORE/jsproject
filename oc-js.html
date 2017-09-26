@@ -102,7 +102,25 @@
         alert('bonjour');
     };
     direbonjour();
-
+    //14
+    var chaine = 'ceci est une chaine de caractère';
+    alert ('chaine contient:'+chaine.length+ 'caractères');
+    alert (chaine.toUpperCase() +' ' + 'écrite en majuscule');
+    //15 les tableaux en js
+    var tableau = ['sebastien', 'laurence', 'ludo', 'pauline', 'guillaume'];
+    tableau[2] = 'js';
+    alert (tableau[2]);
+    //16 opérations sur les tableau: ajout et suppression des elements
+    var tableau2 = ['sebastien', 'laurence'];
+    tableau2.push('ludo');
+    tableau2.push('pauline', 'guillaume');
+    tableau2.pop();
+    //17 chaines de caractères et les tableaux
+    var cousinString = 'pauline guillaume clarisse', cousinArray =
+            cousinString.split(' ');
+    alert ( cousinString);
+    alert (cousinArray);
+    alert (cousinArray[1]);
 </script>
 </body>
 <script src="oc-js.js"></script>
