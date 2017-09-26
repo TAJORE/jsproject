@@ -89,6 +89,19 @@
             proceed = false;
         }
     }
+    //12 fonctions avec paramètre facultatif
+    function prompt2 ( text, allowCancel){
+        if (typeof allowCancel === 'undefined'){
+            allowCancel = false;
+        }
+    }
+    prompt2('entrez quelque chose');
+    alert(prompt2);
+    //13 fonctions anonymes
+    var direbonjour = function () {
+        alert('bonjour');
+    };
+    direbonjour();
 
 </script>
 </body>

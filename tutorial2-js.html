@@ -1,6 +1,50 @@
 <!DOCTYPE html>
 <html>
 <body>
+<p id="demo1">1) javascript peut changé un contenu html</p>
+
+<button type="button" onclick="document.getElementById('demo1').innerHTML =
+'hello js'"> cliquer ici</button>
+<p>2) javascript peur changé les attributs HTML</p>
+ <button onclick="document.getElementById('demo2').innerHTML='tutorial-js.html'">cliquer ici pour changé l'image</button>
+ <img id="demo2" src="tutorial-js.html" style="width: 100px heigh: 100px"></img>
+<button onclick="document.getElementById('demo2').src='test4.png'"> cliquer ici pour
+avoir une autre image</button>
+<button onclick="document.getElementById('demo2').src='test5.png'"> cliquer ici pour
+    voir la troisième image</button>
+<p id="demo3">3) javascript peut changé le style css d'un élément html</p>
+<button type="button" onclick="document.getElementById('demo3').style.fontSize='30px'">cliquer
+    ici pour voir le changement </button>
+    <p id="demo4">4) javascript peut caché un élément </p>
+    <button onclick="document.getElementById('demo4').style.display='none'"> cliquer ici pour faire disparaitre
+        </button>
+<p id="demo5" style="display: none">5) javascript peut caché un texte </p>
+    <button onclick="document.getElementById('demo5').style.display='block'"> cliquer ici pour afficher le texte</button>
+<p id="demo6">6) javascript peut etre utilisé pour changé un texte via une fonction</p>
+<script>
+    function fonction5(){
+        document.getElementById('demo6').innerHtml=" javascript is fun!"
+    }
+</script>
+<button onmouseover="document.getElementById('demo6').innerHTML='hello world'"> placer le curseur ici pour voir</button>
+<p>7) concaténation avec les chaines de caractères</p>
+<p id="demo7">7) concaténation avec les chaines de caractères</p>
+<script>
+    document.getElementById('demo7').innerHTML="john" + "  " + "davos";
+</script>
+<p>8) les objets en js</p>
+<p id="demo8"></p>
+<script>
+    var car ={type : "fiat", model: 800};
+    document.getElementById("demo8").innerHTML= car.type;
+</script>
+    <p>9)creation d'un objet en js</p>
+    <p id="demo9"></p>
+<script>
+    var personne = {nom : "onam",  prenom : "jean", age : 18, pays : "cameroun" };
+    document.getElementById('demo9').innerHTML="je m'appel"+ " " + personne.nom + " " + personne.prenom + " et mon pays est le " +  " " +
+                    personne.pays;
+</script>
 <p>10) création et utilisation des méthodes d'un objet js</p>
 <p id="demo10"></p>
 <script>
@@ -9,14 +53,15 @@
         nbre_chambre : "10",
         anne_construct : "2017",
         nom_proprietaire : "mugabe",
-        prenom_proprietaire : "simon",
+        prenom_proprietaire : "simon"
         fullname : function (){
           return  this.nom_proprietaire + " "+ this.prenom_proprietaire;
         }
 
-    }
-    document.getElementById('demo10').innerHTML= "ce"+ " " + maison.type + " " + "contruit en" +" " + maison.anne_construct +"appartient à monsieur " + " " + maison.fullname();
+    };
+    document.getElementById('demo10').innerHTML= "ce"+ " " + maison.type + " " + "contruit en" + maison.anne_construct +"appartient à monsieur " + " " + maison.fullname();
 </script>
+
 </body>
 <script src="tutorial2-js.js"></script>
 </html>
