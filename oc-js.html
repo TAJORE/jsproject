@@ -1,127 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>
-        hello js
-    </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="school.css" />
+    <link rel="stylesheet" href="oc.css" />
+    <title>school project</title>
+    <ul>
+        <li class="dropdown">
+            <a  href="index.html" class="dropbtn"     id="changer-couleur-accueil"
+                onmouseover="accueil(); reset_bg_sauf_accueil()"
+                onClick="accueil(); reset_bg_sauf_accueil()">Home </a>
+        </li>
+        <li class="dropdown">
+            <span href="" class="dropbtn" id="changer-couleur-admission"
+                  onmouseover="admission(); reset_bg_sauf_admission()"
+                  onClick="admission(); reset_bg_sauf_admission()">Admissions</span>
+            <div class="dropdown-content">
+                <a href="#">Level 1</a>
+                <a href="#">Level 2</a>
+                <a href="#">Level 3</a>
+                <a href="#">Level 4</a>
+                <a href="#">Level 5</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <span href="" class="dropbtn"  id="changer-couleur-program"
+                  onmouseover="program(); reset_bg_sauf_program()"
+                  onClick="program(); reset_bg_sauf_program()">Programs</span>
+            <div class="dropdown-content">
+                <a href="#">Level 1</a>
+                <a href="#">Level 2</a>
+                <a href="#">Level 3</a>
+                <a href="#">Level 4</a>
+                <a href="#">Level 5</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <span href="" class="dropbtn"   id="changer-couleur-inscription"
+                  onmouseover="inscription(); reset_bg_sauf_inscription()"
+                  onClick="inscription(); reset_bg_sauf_inscription()">Inscription</span>
+            <div class="dropdown-content">
+                <a href="#">Yaounde Campus</a>
+                <a href="#">Douala Campus</a>
+                <a href="#">Bafoussam Campus</a>
+                <a href="#">Ebolowa Campus</a>
+                <a href="#">Bafia Campus</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a  class="dropbtn"    href="tutorial-js.html" id="changer-couleur-tuto"
+                onmouseover="tuto(); reset_bg_sauf_tuto()"
+                onClick="tuto(); reset_bg_sauf_tuto()">Tutoriel JS </a>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a  class="dropbtn"    href="tutorial2-js.html" id="changer-couleur-tuto2"
+                onmouseover="tuto2(); reset_bg_sauf_tuto2()"
+                onclick="tuto2(); reset_bg_sauf_tuto2()">Tutoriel2 JS </a>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a  class="dropbtn"    href="oc-js.html" id="changer-couleur-tuto-oc"
+                onmouseover="tuto_oc(); reset_bg_sauf_tuto_oc()"
+                onclick="tuto_oc(); reset_bg_sauf_tuto_oc()">Tutoriel OC JS </a>
+            <div class="dropdown-content">
+                <a href="#">openclassroom</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li>
+    </ul>
 </head>
 <body>
+
+
+//27 acc√®s √† l'√©l√©ment parent avec parentNode
+ <blockquote>
+     <p id="myp">
+         ceci est un paragraphe !; <a href="">un lien</a>
+         et <strong>une portion en emphase</strong>
+     </p>
+ </blockquote>
 <script>
-    //0
-    var etage = parseInt(prompt("entrer l'Ètage ou l'ascenseur doit se rendre (de -2 ‡ 30):"));
-    if (etage == 0){
-        alert('vous vous trouvez deja au rdc');
-    } else if (-2 <= etage && etage <= 30){
-        alert("direction etage N0:" + etage + '!');
-    }else {
-        alert("l'Ètage spÈcifiÈ n'existe pas");
-    }
-    //1
-    alert('hello world');
-    //2
-    alert(typeof nothing);
-    //3
-    var userName = prompt('entrer votre prenom');
-    alert(userName);
-    //4
-    var first, second, result, firstt, secondd;
-    first = prompt('entrer le premier chiffre:');
-    second = prompt('entrer le second chiffre:');
-    firstt = parseInt(first);
-    secondd = parseInt(second);
-    result = firstt + secondd;
-    alert(result);
-    //5
-    resultat = true && true;
-    alert(resultat);
-    //6
-    if (confirm('voulez-vous exÈcutÈ le js de cette page?')){
-        alert('le code a bien ÈtÈ ÈxÈcutÈ');
-    }
-    //7
-    var tiroir = parseInt(prompt('choisissez le tiroir ‡ ouvir (entre 1 et 4)'));
-    switch (tiroir){
-        case 1:
-            alert("contient les outils informatiques");
-            break;
-        case 2:
-            alert("contient les outils de dessins");
-            break;
-        case 3:
-            alert("contient des rams");
-            break;
-        case 4:
-            alert("contient des cahiers");
-            break;
-        default :
-            alert("entrer une valeur comprise entre 1 et 4");
-    }
-    //8
-    var debut = 'votre catÈgorie :', fin, adulte = confirm('etes vous majeur');
-    fin = adulte ? '18+' : '-18';
-    alert(debut + fin);
-    //9
-    var age = parseInt(prompt('entrer votre age(1-120):'));
-    if (age> 0 & age <18){
-        alert("mineur");
-    }else if (age> 17 & age <50){
-        alert("majeur");
-    }else if (age>49 & age <60){
-        alert("senior");
-    } else if  (age> 59 & age <121){
-        alert("retraite");
-    } else {
-        alert("veuillez entrer un age dans l' intervvalle 1-120");
-    }
-    //10 boucle while
-    var nombre = 1;
-    while (nombre<10){
-        nombre++;
-    }
-    alert(nombre);
-    //11
-    var nicks = '', nick, proceed = true;
-    while (proceed){
-        nick = prompt('entrer un prÈnom:');
-        if (nick) {
-            nicks += nick + ' ';
-        } else {
-            proceed = false;
+    var paragraph = document.getElementById('myp');
+    var blockquote = paragraph.parentNode;
+    alert(paragraph.nodeType + '\n\n' + paragraph.nodeName.toLocaleLowerCase());
+</script>
+// 28 firstchild et lastchild
+<script>
+    var first = paragraph.firstChild;
+    var last = paragraph.lastChild;
+    alert(first.nodeValue);
+    alert(last.firstChild.data);
+</script>
+// 29 childnodes (liste des enfants d'un element)
+<script>
+    var children = paragraph.childNodes;
+    for (var i = 0, c = children.length; i < c; i++){
+        if (children[i].nodeType===1){
+            alert(children[i].firstChild.data);
+        }else{
+            alert(children[i].data);
         }
+
     }
-    //12 fonctions avec paramËtre facultatif
-    function prompt2 ( text, allowCancel){
-        if (typeof allowCancel === 'undefined'){
-            allowCancel = false;
-        }
-    }
-    prompt2('entrez quelque chose');
-    alert(prompt2);
-    //13 fonctions anonymes
-    var direbonjour = function () {
-        alert('bonjour');
-    };
-    direbonjour();
-    //14
-    var chaine = 'ceci est une chaine de caractËre';
-    alert ('chaine contient:'+chaine.length+ 'caractËres');
-    alert (chaine.toUpperCase() +' ' + 'Ècrite en majuscule');
-    //15 les tableaux en js
-    var tableau = ['sebastien', 'laurence', 'ludo', 'pauline', 'guillaume'];
-    tableau[2] = 'js';
-    alert (tableau[2]);
-    //16 opÈrations sur les tableau: ajout et suppression des elements
-    var tableau2 = ['sebastien', 'laurence'];
-    tableau2.push('ludo');
-    tableau2.push('pauline', 'guillaume');
-    tableau2.pop();
-    //17 chaines de caractËres et les tableaux
-    var cousinString = 'pauline guillaume clarisse', cousinArray =
-            cousinString.split(' ');
-    alert ( cousinString);
-    alert (cousinArray);
-    alert (cousinArray[1]);
 </script>
 </body>
 <script src="oc-js.js"></script>
+<script src="school.js"></script>
 </html>

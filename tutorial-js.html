@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="school.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>school project</title>
     <ul>
         <li class="dropdown">
@@ -53,6 +52,26 @@
                 onClick="tuto(); reset_bg_sauf_tuto()">Tutoriel JS </a>
             <div class="dropdown-content">
                 <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a  class="dropbtn"    href="tutorial2-js.html" id="changer-couleur-tuto2"
+                onmouseover="tuto2(); reset_bg_sauf_tuto2()"
+                onclick="tuto2(); reset_bg_sauf_tuto2()">Tutoriel2 JS </a>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a  class="dropbtn"    href="oc-js.html" id="changer-couleur-tuto-oc"
+                onmouseover="tuto_oc(); reset_bg_sauf_tuto_oc()"
+                onclick="tuto_oc(); reset_bg_sauf_tuto_oc()">Tutoriel OC JS </a>
+            <div class="dropdown-content">
+                <a href="#">openclassroom</a>
                 <a href="#">Link 2</a>
                 <a href="#">Link 3</a>
             </div>
@@ -213,29 +232,34 @@ Entrer un Nombre<input id="nombree">
             document.getElementById("erreur").innerHTML =" erreur ce nombre est très grand, veuillez entrer un plus petit!";
             document.getElementById("erreur").style.display = "block";
         }
-        else
-            document.getElementById("resultat").innerHTML =result;
+        else {
+            document.getElementById("erreur").style.display = "none";
+            document.getElementById("resultat").innerHTML = result;
+        }
     }
 </script>
 <form  name="monForm">
-    Entrer le premier nombre: <input type="text" name="prmiere_valeur"></br>
-    Entrer le second  nombre: <input type="text" name="deuxieme_valeur"></br>
-    <input type="button" value="Resultat" onclick="fonction_form()"></br>
+    Entrer le premier nombre: <input type="text" name="prmiere_valeur">
+    </br>
+    Entrer le second  nombre: <input type="text" name="deuxieme_valeur">
+    </br>
+    <input type="button" value="Resultat" onclick="fonction_form()">
+    </br>
     Resultat: <div id="resultat"></div>
-    <div class="error" id="erreur">
+    <div class="error" id="erreur" style="display: none">
     </div>
 </form>
 <p>19) concatenation</p>
 <script>
     function concat_form(){
-        var mot1 = document.forms["concatForm"]["premier_mot"].value;
-        var mot2 = document.forms["concatForm"]["premier_mot"].value;
-        document.getElementById("concat").innerHTML =  mot1 + "" +  mot2;
+        var mot1 = document.getElementById("premiere_valeur").value;
+        var mot2 = document.getElementById("deuxieme_valeur").value;
+        document.getElementById("concat").innerHTML =  mot1 + " " +  mot2;
     }
 </script>
 <form name="concatForm">
-    Entrer le premier mot: <input type="text" name="premiere_valeur"></br>
-    Entrer le deuxieme mot: <input type="text" name="deuxieme_valeur"></br>
+    Entrer le premier mot: <input type="text" id="premiere_valeur" name="premiere_valeur"></br>
+    Entrer le deuxieme mot: <input type="text" id="deuxieme_valeur" name="deuxieme_valeur"></br>
     <input type="button" value="Submit" onclick="concat_form()"></br>
     Resultat: <div id="concat"></div>
 </form>
