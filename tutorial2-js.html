@@ -72,11 +72,15 @@
     document.getElementById("demo12").innerHTML= Math.floor(Math.random()*10);
 </script>
 <p>13) fonction qui renvoi un nombre aléatoire avec min et max inclus</p>
+<script>
+    var min = prompt('entrer le min');
+    var max = prompt('entrer le max');
+</script>
 <button
-       onclick="document.getElementById('demo13').innerHTML = getRndIntger (1, 30)
+        onclick="document.getElementById('demo13').innerHTML = getRndIntger (parseInt(min), parseInt(max))
        "
         > cliquer ici</button>
-  <p id='demo13'></p>
+<p id='demo13'></p>
 <script>
     function getRndIntger(min, max){
         return Math.floor(Math.random()*(max - min +1)) +min;
