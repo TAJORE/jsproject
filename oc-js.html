@@ -82,37 +82,15 @@
 <body>
 
 
-//27 accès à l'élément parent avec parentNode
- <blockquote>
-     <p id="myp">
-         ceci est un paragraphe !; <a href="">un lien</a>
-         et <strong>une portion en emphase</strong>
-     </p>
- </blockquote>
+<p>31) remplacé un element par un autre</p>
+<p id="demo31"> un peu de texte <a href="">  et un lien</a></p>
 <script>
-    var paragraph = document.getElementById('myp');
-    var blockquote = paragraph.parentNode;
-    alert(paragraph.nodeType + '\n\n' + paragraph.nodeName.toLocaleLowerCase());
-</script>
-// 28 firstchild et lastchild
-<script>
-    var first = paragraph.firstChild;
-    var last = paragraph.lastChild;
-    alert(first.nodeValue);
-    alert(last.firstChild.data);
-</script>
-// 29 childnodes (liste des enfants d'un element)
-<script>
-    var children = paragraph.childNodes;
-    for (var i = 0, c = children.length; i < c; i++){
-        if (children[i].nodeType===1){
-            alert(children[i].firstChild.data);
-        }else{
-            alert(children[i].data);
-        }
+    var lien = document.getElementsByTagName('a')[0];
+    var nouveaulabel = document.createTextNode('et un hyper lien');
 
-    }
+    lien.replaceChild(nouveaulabel, lien.firstChild);
 </script>
+
 </body>
 <script src="oc-js.js"></script>
 <script src="school.js"></script>
