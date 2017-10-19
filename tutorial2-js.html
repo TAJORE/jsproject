@@ -183,6 +183,36 @@
     var mes_enfants = garçons.concat(filles);
     document.getElementById("demo27").innerHTML = mes_enfants;
 </script>
+<p>28) tri et inverse dans un tableau par ordre croissant avec la méthode sort()
+    etreverse()</p>
+<p id="demo28"></p>
+<script>
+    var garçons = ["joseph","lionel","urich","crepin"];
+    garçons.sort();
+    garçons.reverse();
+    document.getElementById("demo28").innerHTML =garçons;
+</script>
+<p>29) classement des nombres dans un tableau</p>
+<p id="demo29"></p>
+<button onclick="fonction29()">cliquer ici pour claseer les nombres</button>
+<script>
+    var points = [40,100,1,5,25,10];
+    document.getElementById("demo29").innerHTML= points;
+    function fonction29(){
+        points.sort(function(a,b){return  a - b});
+        points.reverse(function(a,b){return  a - b});
+        document.getElementById("demo29").innerHTML = points;
+    }
+</script>
+<p>30) determination du max dans un tableau</p>
+<p id="demo30"></p>
+<script>
+    var points = [40,100,1,5,25,10];
+    document.getElementById("demo30").innerHTML= maxtableau(points);
+    function maxtableau(tableau){
+        return Math.max.apply(null,tableau);
+    }
+</script>
 <p>11) utilisation de random()</p>
 <p id="demo"></p>
 <script>
