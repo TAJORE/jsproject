@@ -154,10 +154,34 @@
     document.getElementById("demo23").innerHTML = jours;
 
 </script>
-<p>22) utilisation de random()</p>
+<p>24) utilisation de delete() sur les tableaux</p>
 <p id="demo24"></p>
+<p id="demo25"></p>
 <script>
-    document.getElementById("demo12").innerHTML;
+    var jours = ["lundi","mardi","mercredi","jeudi"];
+    document.getElementById("demo24").innerHTML = "le premier jour de " +
+            "la semaine est"+ '  ' + jours[0];
+    delete jours[0];
+    document.getElementById("demo25").innerHTML = "le premier jour de " +
+            "la semaine est"+ '   ' + jours[0];
+</script>
+<p>26) utilisation de la methode splice() pour supprimer un element sans laiseer de vide</p>
+<p id="demo26"></p>
+<script>
+    var jours = ["lundi","mardi","mercredi","jeudi"];
+    document.getElementById("demo26").innerHTML = jours;
+    function fonction26 (){
+        jours.splice(1,1);
+    }
+    document.getElementById("demo26").innerHTML = jours;
+</script>
+<p>27) fusion de deux tableaux avec la méthode concat()</p>
+<p id="demo27"></p>
+<script>
+    var garçons = ["joseph","lionel","urich","crepin"];
+    var filles = ["anastasie","carole","natacha","inatia"];
+    var mes_enfants = garçons.concat(filles);
+    document.getElementById("demo27").innerHTML = mes_enfants;
 </script>
 <p>11) utilisation de random()</p>
 <p id="demo"></p>
