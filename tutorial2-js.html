@@ -6,20 +6,20 @@
 <button type="button" onclick="document.getElementById('demo1').innerHTML =
 'hello js'"> cliquer ici</button>
 <p>2) javascript peur changé les attributs HTML</p>
- <button onclick="document.getElementById('demo2').src='test2.png'">cliquer ici pour voir la seconde image</button>
- <img id="demo2" src="test3.PNG" style="width: 100px heigh: 100px"></img>
+<button onclick="document.getElementById('demo2').src='test2.png'">cliquer ici pour voir la seconde image</button>
+<img id="demo2" src="test3.PNG" style="width: 100px heigh: 100px"></img>
 <button onclick="document.getElementById('demo2').src='test3.png'"> cliquer ici pour
-avoir la premiere image</button>
+    avoir la premiere image</button>
 <button onclick="document.getElementById('demo2').src='test5.png'"> cliquer ici pour
     voir la troisième image</button>
 <p id="demo3">3) javascript peut changé le style css d'un élément html</p>
 <button type="button" onclick="document.getElementById('demo3').style.fontSize='30px'">cliquer
     ici pour voir le changement </button>
-    <p id="demo4">4) javascript peut caché un élément </p>
-    <button onclick="document.getElementById('demo4').style.display='none'"> cliquer ici pour faire disparaitre
-        </button>
+<p id="demo4">4) javascript peut caché un élément </p>
+<button onclick="document.getElementById('demo4').style.display='none'"> cliquer ici pour faire disparaitre
+</button>
 <p id="demo5" style="display: none">5) javascript peut caché un texte </p>
-    <button onclick="document.getElementById('demo5').style.display='block'"> cliquer ici pour afficher le texte</button>
+<button onclick="document.getElementById('demo5').style.display='block'"> cliquer ici pour afficher le texte</button>
 <p id="demo6">6) javascript peut etre utilisé pour changé un texte via une fonction</p>
 <script>
     function fonction5(){
@@ -38,12 +38,12 @@ avoir la premiere image</button>
     var car ={type : "fiat", model: 800};
     document.getElementById("demo8").innerHTML= car.type;
 </script>
-    <p>9)creation d'un objet en js</p>
-    <p id="demo9"></p>
+<p>9)creation d'un objet en js</p>
+<p id="demo9"></p>
 <script>
     var personne = {nom : "onam",  prenom : "jean", age : 18, pays : "cameroun" };
     document.getElementById('demo9').innerHTML="je m'appel"+ " " + personne.nom + " " + personne.prenom + " et mon pays est le " +  " " +
-                    personne.pays;
+            personne.pays;
 </script>
 <p>10) création et utilisation des méthodes d'un objet js</p>
 <p id="demo10"></p>
@@ -55,13 +55,38 @@ avoir la premiere image</button>
         nom_proprietaire : "mugabe",
         prenom_proprietaire : "simon"
         fullname : function (){
-          return  this.nom_proprietaire + " "+ this.prenom_proprietaire;
+            return  this.nom_proprietaire + " "+ this.prenom_proprietaire;
         }
 
     };
     document.getElementById('demo10').innerHTML= "ce"+ " " + maison.type + " " + "contruit en" + maison.anne_construct +"appartient à monsieur " + " " + maison.fullname();
 </script>
-
+<p>11) utilisation de random()</p>
+<p id="demo11"></p>
+<script>
+    document.getElementById("demo11").innerHTML = Math.random();
+</script>
+<p>12) utilisation de random() et math.floor (renvoi un nombre entre 1 et 9)</p>
+<p id="demo12"></p>
+<script>
+    document.getElementById("demo12").innerHTML= Math.floor(Math.random()*10);
+</script>
+<p>13) fonction qui renvoi un nombre aléatoire avec min et max inclus</p>
+<button
+       onclick="document.getElementById('demo13').innerHTML = getRndIntger (1, 30)
+       "
+        > cliquer ici</button>
+  <p id='demo13'></p>
+<script>
+    function getRndIntger(min, max){
+        return Math.floor(Math.random()*(max - min +1)) +min;
+    }
+</script>
+<p>11) utilisation de random()</p>
+<p id="demo"></p>
+<script>
+    document.getElementById("demo12").innerHTML;
+</script>
 </body>
 <script src="tutorial2-js.js"></script>
 </html>
