@@ -86,6 +86,57 @@
         return Math.floor(Math.random()*(max - min +1)) +min;
     }
 </script>
+<p>14) affichage d'une date avec les paramètre défini</p>
+<p id="demo14"></p>
+<script>
+    var date19 = new Date(99,5,25);
+    document.getElementById("demo14").innerHTML = date19;
+</script>
+<p>15) affichage d'une date avec toString</p>
+<p id="demo15"></p>
+<script>
+    document.getElementById("demo15").innerHTML = new Date().toDateString();
+</script>
+<p>16) utilisation d'un tableau et getday() pour afficher les jours de la semaine</p>
+<p id="demo16"></p>
+<script>
+    var date16 = new Date();
+    var jours = [
+        "dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"
+    ];
+    document.getElementById("demo16").innerHTML = jours[date16.getDay()];
+</script>
+<p>17) affichage des tableaux</p>
+<p id="demo17"></p>
+<script>
+    var jours = ["lundi","mardi","mercredi","jeudi"];
+    document.getElementById("demo17").innerHTML = jours;
+</script>
+<p>18) affichage des lements d'un tableau couplé aux tag html</p>
+<p id="demo18"></p>
+<script>
+    var fruits, text, flen, i;
+    fruits = ["banane", "orange", "apple", "apple"];
+    flen = fruits.length;
+    text = "<ul>";
+    for (i = 0; i<flen; i++){
+        text += "<li>" + fruits[i]+ "</li>";
+    }
+    text += "</ul>";
+    document.getElementById("demo18").innerHTML= text;
+</script>
+<p>19) ajout d'un element dans un tableau avec push</p>
+<p id="demo19"></p>
+<button onmouseover="fonction19()"> mettre le curseur ici pour augmenté un jour</button>
+<script>
+    var jours = ["lundi","mardi","mercredi","jeudi"];
+    document.getElementById("demo19").innerHTML = jours;
+
+    function fonction19 (){
+        jours.push("vendredi");
+        document.getElementById("demo19").innerHTML = jours;
+    }
+</script>
 <p>11) utilisation de random()</p>
 <p id="demo"></p>
 <script>
