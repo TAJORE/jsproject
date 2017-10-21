@@ -204,7 +204,7 @@
         document.getElementById("demo29").innerHTML = points;
     }
 </script>
-<p>30) determination du max dans un tableau</p>
+<p>30) determination du max dans un tableau de nombre</p>
 <p id="demo30"></p>
 <script>
     var points = [40,100,1,5,25,10];
@@ -212,6 +212,105 @@
     function maxtableau(tableau){
         return Math.max.apply(null,tableau);
     }
+</script>
+<p>31) utilisation de la condition ternaire</p>
+<p id="demo31"></p>
+Prénom: <input type="text" id="fname" value="john">
+<button onclick="checkname()">Vérifier le nom</button>
+<script>
+    function checkname(){
+        var prenom = document.getElementById("fname").value;
+        var resultat = (prenom === "john")? "hello john!":"you're not john";
+        document.getElementById("demo31").innerHTML = resultat;
+    }
+</script>
+<p>32) utilisation de la condition ternaire</p>
+<p id="demo32"></p>
+Age: <input type="number" id="age" value="18">
+<button onclick="checkage()">Vérifier l'age</button>
+<script>
+    function checkage(){
+        var age = document.getElementById("age").value;
+        var voteable = (age < 18)? "too young":"old enough";
+        document.getElementById("demo32").innerHTML = voteable + "to vote";
+    }
+</script>
+<p>33) utilisation du switch</p>
+<input id="monInput" type="text" value="orange">
+<button onclick="checkfruit()"> vérifier le fruit</button>
+<p id="demo33"></p>
+<script>
+    function checkfruit(){
+        var text;
+        var fruits = document.getElementById("monInput").value;
+
+        switch (fruits){
+            case "banane":
+                text = "la banane est bonne";
+                break;
+            case "orange":
+                text = "je ne suis pas fan de l'orange";
+                break;
+            case "Apple":
+                text = "pourquoi aime tu cela?";
+                break;
+            default :
+                text = "je n'aime pas ces fruits";
+        }
+        document.getElementById("demo33").innerHTML = text;
+    }
+</script>
+<p>34) utilisation du switch cas2</p>
+<input id="monInput2" type="text" value="BMW">
+<button onclick="checkfruit()"> vérifier le véhicule</button>
+<p id="demo34"></p>
+<script>
+    function checkfruit(){
+        var text;
+        var voiture = document.getElementById("monInput2").value;
+
+        switch (voiture){
+            case "BMW":
+                text = "voiture allemande";
+                break;
+            case "peugeot":
+                text = "voiture française";
+                break;
+            case "ford":
+                text = "voiture americaine";
+                break;
+            case "toyota":
+                text = "voiture japonaise";
+                break;
+            default :
+                text = "je n'ai pas de fabricant";
+        }
+        document.getElementById("demo34").innerHTML = text;
+    }
+</script>
+<p>35) la boucle for</p>
+<p id="demo35"></p>
+<script>
+    var voitures = ["BMW", "volvo", "Saab", "Ford"];
+    var i = 0;
+    var len = voitures.length;
+    var texts = " ";
+    for (; i<len; ){
+        texts += voitures[i] + "<br>";
+        i++;
+    }
+    document.getElementById("demo35").innerHTML = texts;
+</script>
+<p>36) utilisation de la boucle for/in</p>
+<p id="demo36"></p>
+<script>
+    var textes = " ";
+    var person = {fname:"john", lname:"Doe", age:25};
+    var x;
+    for (x in person){
+        textes += person[x]+ " ";
+    }
+    document.getElementById("demo36").innerHTML = textes;
 </script>
 <p>11) utilisation de random()</p>
 <p id="demo"></p>
