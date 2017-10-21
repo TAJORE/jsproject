@@ -1,34 +1,122 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="school.css" />
+    <title>school project</title>
+    <ul>
+        <li class="dropdown">
+            <a  href="index.html" class="dropbtn"     id="changer-couleur-accueil"
+                onmouseover="accueil(); reset_bg_sauf_accueil()"
+                onClick="accueil(); reset_bg_sauf_accueil()">Home </a>
+        </li>
+        <li class="dropdown">
+            <span href="" class="dropbtn" id="changer-couleur-admission"
+                  onmouseover="admission(); reset_bg_sauf_admission()"
+                  onClick="admission(); reset_bg_sauf_admission()">Admissions</span>
+            <div class="dropdown-content">
+                <a href="#">Level 1</a>
+                <a href="#">Level 2</a>
+                <a href="#">Level 3</a>
+                <a href="#">Level 4</a>
+                <a href="#">Level 5</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <span href="" class="dropbtn"  id="changer-couleur-program"
+                  onmouseover="program(); reset_bg_sauf_program()"
+                  onClick="program(); reset_bg_sauf_program()">Programs</span>
+            <div class="dropdown-content">
+                <a href="#">Level 1</a>
+                <a href="#">Level 2</a>
+                <a href="#">Level 3</a>
+                <a href="#">Level 4</a>
+                <a href="#">Level 5</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <span href="" class="dropbtn"   id="changer-couleur-inscription"
+                  onmouseover="inscription(); reset_bg_sauf_inscription()"
+                  onClick="inscription(); reset_bg_sauf_inscription()">Inscription</span>
+            <div class="dropdown-content">
+                <a href="#">Yaounde Campus</a>
+                <a href="#">Douala Campus</a>
+                <a href="#">Bafoussam Campus</a>
+                <a href="#">Ebolowa Campus</a>
+                <a href="#">Bafia Campus</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a  class="dropbtn"    href="tutorial-js.html" id="changer-couleur-tuto"
+                onmouseover="tuto(); reset_bg_sauf_tuto()"
+                onClick="tuto(); reset_bg_sauf_tuto()">Tutoriel JS </a>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a  class="dropbtn"    href="tutorial2-js.html" id="changer-couleur-tuto2"
+                onmouseover="tuto2(); reset_bg_sauf_tuto2()"
+                onclick="tuto2(); reset_bg_sauf_tuto2()">Tutoriel2 JS </a>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a  class="dropbtn"    href="oc-js.html" id="changer-couleur-tuto-oc"
+                onmouseover="tuto_oc(); reset_bg_sauf_tuto_oc()"
+                onclick="tuto_oc(); reset_bg_sauf_tuto_oc()">Tutoriel OC JS </a>
+            <div class="dropdown-content">
+                <a href="#">openclassroom</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a  class="dropbtn"    href="Testquery.html"
+                onmouseover="tuto_oc(); reset_bg_sauf_tuto_oc()"
+                onclick="tuto_oc(); reset_bg_sauf_tuto_oc()">Test Media Queries </a>
+            <div class="dropdown-content">
+                <a href="#">link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li>
+    </ul>
+</head>
 <body>
-<p id="demo1">1) javascript peut changé un contenu html</p>
+<p id="demo1">1) javascript peut changÃ© un contenu html</p>
 
 <button type="button" onclick="document.getElementById('demo1').innerHTML =
 'hello js'"> cliquer ici</button>
-<p>2) javascript peur changé les attributs HTML</p>
+<p>2) javascript peur changÃ© les attributs HTML</p>
 <button onclick="document.getElementById('demo2').src='test2.png'">cliquer ici pour voir la seconde image</button>
 <img id="demo2" src="test3.PNG" style="width: 100px heigh: 100px"></img>
 <button onclick="document.getElementById('demo2').src='test3.png'"> cliquer ici pour
     avoir la premiere image</button>
 <button onclick="document.getElementById('demo2').src='test5.png'"> cliquer ici pour
-    voir la troisième image</button>
-<p id="demo3">3) javascript peut changé le style css d'un élément html</p>
+    voir la troisiÃ¨me image</button>
+<p id="demo3">3) javascript peut changÃ© le style css d'un Ã©lÃ©ment html</p>
 <button type="button" onclick="document.getElementById('demo3').style.fontSize='30px'">cliquer
     ici pour voir le changement </button>
-<p id="demo4">4) javascript peut caché un élément </p>
+<p id="demo4">4) javascript peut cachÃ© un Ã©lÃ©ment </p>
 <button onclick="document.getElementById('demo4').style.display='none'"> cliquer ici pour faire disparaitre
 </button>
-<p id="demo5" style="display: none">5) javascript peut caché un texte </p>
+<p id="demo5" style="display: none">5) javascript peut cachÃ© un texte </p>
 <button onclick="document.getElementById('demo5').style.display='block'"> cliquer ici pour afficher le texte</button>
-<p id="demo6">6) javascript peut etre utilisé pour changé un texte via une fonction</p>
+<p id="demo6">6) javascript peut etre utilisÃ© pour changÃ© un texte via une fonction</p>
 <script>
     function fonction5(){
         document.getElementById('demo6').innerHtml=" javascript is fun!"
     }
 </script>
 <button onmouseover="document.getElementById('demo6').innerHTML='hello world'"> placer le curseur ici pour voir</button>
-<p>7) concaténation avec les chaines de caractères</p>
-<p id="demo7">7) concaténation avec les chaines de caractères</p>
+<p>7) concatÃ©nation avec les chaines de caractÃ¨res</p>
+<p id="demo7">7) concatÃ©nation avec les chaines de caractÃ¨res</p>
 <script>
     document.getElementById('demo7').innerHTML="john" + "  " + "davos";
 </script>
@@ -45,7 +133,7 @@
     document.getElementById('demo9').innerHTML="je m'appel"+ " " + personne.nom + " " + personne.prenom + " et mon pays est le " +  " " +
             personne.pays;
 </script>
-<p>10) création et utilisation des méthodes d'un objet js</p>
+<p>10) crÃ©ation et utilisation des mÃ©thodes d'un objet js</p>
 <p id="demo10"></p>
 <script>
     var maison = {
@@ -59,7 +147,7 @@
         }
 
     };
-    document.getElementById('demo10').innerHTML= "ce"+ " " + maison.type + " " + "contruit en" + maison.anne_construct +"appartient à monsieur " + " " + maison.fullname();
+    document.getElementById('demo10').innerHTML= "ce"+ " " + maison.type + " " + "contruit en" + maison.anne_construct +"appartient Ã  monsieur " + " " + maison.fullname();
 </script>
 <p>11) utilisation de random()</p>
 <p id="demo11"></p>
@@ -71,7 +159,7 @@
 <script>
     document.getElementById("demo12").innerHTML= Math.floor(Math.random()*10);
 </script>
-<p>13) fonction qui renvoi un nombre aléatoire avec min et max inclus</p>
+<p>13) fonction qui renvoi un nombre alÃ©atoire avec min et max inclus</p>
 <script>
     var min = prompt('entrer le min');
     var max = prompt('entrer le max');
@@ -86,7 +174,7 @@
         return Math.floor(Math.random()*(max - min +1)) +min;
     }
 </script>
-<p>14) affichage d'une date avec les paramètre défini</p>
+<p>14) affichage d'une date avec les paramÃ¨tre dÃ©fini</p>
 <p id="demo14"></p>
 <script>
     var date19 = new Date(99,5,25);
@@ -112,7 +200,7 @@
     var jours = ["lundi","mardi","mercredi","jeudi"];
     document.getElementById("demo17").innerHTML = jours;
 </script>
-<p>18) affichage des lements d'un tableau couplé aux tag html</p>
+<p>18) affichage des lements d'un tableau couplÃ© aux tag html</p>
 <p id="demo18"></p>
 <script>
     var fruits, text, flen, i;
@@ -127,7 +215,7 @@
 </script>
 <p>19) ajout d'un element dans un tableau avec push</p>
 <p id="demo19"></p>
-<button onmouseover="fonction19()"> mettre le curseur ici pour augmenté un jour</button>
+<button onmouseover="fonction19()"> mettre le curseur ici pour augmentÃ© un jour</button>
 <script>
     var jours = ["lundi","mardi","mercredi","jeudi"];
     document.getElementById("demo19").innerHTML = jours;
@@ -143,7 +231,7 @@
     var jours = ["lundi","mardi","mercredi","jeudi"];
     document.getElementById("demo20").innerHTML = jours.join("  *  ");
 </script>
-<p>21) utilisation de pop() pour supprimer le dernier élément d'un array</p>
+<p>21) utilisation de pop() pour supprimer le dernier Ã©lÃ©ment d'un array</p>
 <p id="demo21"></p>
 <p id="demo22"></p>
 <p id="demo23"></p>
@@ -175,22 +263,22 @@
     }
     document.getElementById("demo26").innerHTML = jours;
 </script>
-<p>27) fusion de deux tableaux avec la méthode concat()</p>
+<p>27) fusion de deux tableaux avec la mÃ©thode concat()</p>
 <p id="demo27"></p>
 <script>
-    var garçons = ["joseph","lionel","urich","crepin"];
+    var garÃ§ons = ["joseph","lionel","urich","crepin"];
     var filles = ["anastasie","carole","natacha","inatia"];
-    var mes_enfants = garçons.concat(filles);
+    var mes_enfants = garÃ§ons.concat(filles);
     document.getElementById("demo27").innerHTML = mes_enfants;
 </script>
-<p>28) tri et inverse dans un tableau par ordre croissant avec la méthode sort()
+<p>28) tri et inverse dans un tableau par ordre croissant avec la mÃ©thode sort()
     etreverse()</p>
 <p id="demo28"></p>
 <script>
-    var garçons = ["joseph","lionel","urich","crepin"];
-    garçons.sort();
-    garçons.reverse();
-    document.getElementById("demo28").innerHTML =garçons;
+    var garÃ§ons = ["joseph","lionel","urich","crepin"];
+    garÃ§ons.sort();
+    garÃ§ons.reverse();
+    document.getElementById("demo28").innerHTML =garÃ§ons;
 </script>
 <p>29) classement des nombres dans un tableau</p>
 <p id="demo29"></p>
@@ -215,8 +303,8 @@
 </script>
 <p>31) utilisation de la condition ternaire</p>
 <p id="demo31"></p>
-Prénom: <input type="text" id="fname" value="john">
-<button onclick="checkname()">Vérifier le nom</button>
+PrÃ©nom: <input type="text" id="fname" value="john">
+<button onclick="checkname()">VÃ©rifier le nom</button>
 <script>
     function checkname(){
         var prenom = document.getElementById("fname").value;
@@ -227,7 +315,7 @@ Prénom: <input type="text" id="fname" value="john">
 <p>32) utilisation de la condition ternaire</p>
 <p id="demo32"></p>
 Age: <input type="number" id="age" value="18">
-<button onclick="checkage()">Vérifier l'age</button>
+<button onclick="checkage()">VÃ©rifier l'age</button>
 <script>
     function checkage(){
         var age = document.getElementById("age").value;
@@ -237,7 +325,7 @@ Age: <input type="number" id="age" value="18">
 </script>
 <p>33) utilisation du switch</p>
 <input id="monInput" type="text" value="orange">
-<button onclick="checkfruit()"> vérifier le fruit</button>
+<button onclick="checkfruit()"> vÃ©rifier le fruit</button>
 <p id="demo33"></p>
 <script>
     function checkfruit(){
@@ -262,7 +350,7 @@ Age: <input type="number" id="age" value="18">
 </script>
 <p>34) utilisation du switch cas2</p>
 <input id="monInput2" type="text" value="BMW">
-<button onclick="checkfruit()"> vérifier le véhicule</button>
+<button onclick="checkfruit()"> vÃ©rifier le vÃ©hicule</button>
 <p id="demo34"></p>
 <script>
     function checkfruit(){
@@ -274,7 +362,7 @@ Age: <input type="number" id="age" value="18">
                 text = "voiture allemande";
                 break;
             case "peugeot":
-                text = "voiture française";
+                text = "voiture franÃ§aise";
                 break;
             case "ford":
                 text = "voiture americaine";
@@ -395,7 +483,7 @@ Age: <input type="number" id="age" value="18">
 <p>46) conversion du decimal au binaire</p>
 <p id="demo46"></p>
 <script>
-    var nombre = prompt("entrer le nombre à écrire en base 2");
+    var nombre = prompt("entrer le nombre Ã  Ã©crire en base 2");
     document.getElementById("demo46").innerHTML= dec2bin(nombre);
     function dec2bin(dec){
         return (dec >>>0).toString(2);
@@ -404,7 +492,7 @@ Age: <input type="number" id="age" value="18">
 <p>47) conversion du  binaire au decimal</p>
 <p id="demo47"></p>
 <script>
-    var nombre2 = prompt("entrer le nombre à écrire en base 10");
+    var nombre2 = prompt("entrer le nombre Ã  Ã©crire en base 10");
     document.getElementById("demo47").innerHTML= bin2dec(nombre2);
     function bin2dec(bin){
         return parseInt(bin, 2).toString(10);
@@ -419,11 +507,6 @@ Age: <input type="number" id="age" value="18">
         var txt48 = str.replace("Microsoft","STC");
         document.getElementById("demo48").innerHTML= txt48;
     }
-</script>
-<p>11) utilisation de random()</p>
-<p id="demo"></p>
-<script>
-    document.getElementById("demo12").innerHTML;
 </script>
 </body>
 <script src="tutorial2-js.js"></script>
