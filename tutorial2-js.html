@@ -618,6 +618,37 @@ Age: <input type="number" id="age" value="18">
         document.getElementById("demo56").innerHTML = err.name;
     }
 </script>
+<p>57) test des valeurs dans un formulaire</p>
+<input id="id1" type="number" min="100" max="300" required>
+<button onclick="fonction57()">Validation</button>
+<p>si le nombre est inférieur à 100 ou supérieur à 300 on à un message d'érreur</p>
+<p id="demo57"></p>
+<script>
+    function fonction57(){
+        var valeur_entree = document.getElementById("id1");
+        if (valeur_entree.checkValidity() == false){
+            document.getElementById("demo57").innerHTML= valeur_entree.validationMessage;
+        }else{
+            document.getElementById("demo57").innerHTML= "saisie correcte";
+        }
+    }
+</script>
+<p>58) test des valeurs dans un formulaire rangeoverflow</p>
+<input id="id2" type="number"  max="100" >
+<button onclick="fonction58()">Validation</button>
+<p>si le nombre estsupérieur à 100 on aura une érreur</p>
+<p id="demo58"></p>
+<script>
+    function fonction58(){
+        var txt58 = "";
+        if (document.getElementById("id2").validity.rangeOverflow){
+            text58 = "valeur très grande";
+        }else{
+            txt58 = "bonne valeur";
+        }
+        document.getElementById("demo58").innerHTML = txt58;
+    }
+</script>
 </body>
 <script src="tutorial2-js.js"></script>
 </html>
