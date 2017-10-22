@@ -89,7 +89,7 @@
     </ul>
 </head>
 <body>
-p id="demo1">1) javascript peut changé un contenu html</p>
+<p id="demo1">1) javascript peut changé un contenu html</p>
 
 <button type="button" onclick="document.getElementById('demo1').innerHTML =
 'hello js'"> cliquer ici</button>
@@ -531,21 +531,91 @@ Age: <input type="number" id="age" value="18">
 <p id="message"></p>
 <script>
     function fonction51(){
-    var message, x;
-    message = document.getElementById("message");
-    message.innerHTML = " ";
-    x = document.getElementById("demo51").value;
-    try{
-        if (x == "") throw "vous n'avez rien saisie";
-        if (x === 5) throw "bravo vous aver entrer la moitiée de 10";
-        if (isNaN(x)) throw "vous n'avez pas saisie un nombre";
-        x = Number(x);
-        if (x < 5) throw "très prtite";
-        if (x > 10) throw "très grande";
+        var message, x;
+        message = document.getElementById("message");
+        message.innerHTML = " ";
+        x = document.getElementById("demo51").value;
+        try{
+            if (x == "") throw "vous n'avez rien saisie";
+            if (x === 5) throw "bravo vous aver entrer la moitiée de 10";
+            if (isNaN(x)) throw "vous n'avez pas saisie un nombre";
+            x = Number(x);
+            if (x < 5) throw "très prtite";
+            if (x > 10) throw "très grande";
+        }
+        catch (err){
+            message.innerHTML = "la valeur entée est" +"  " +err;
+        }
     }
-    catch (err){
-        message.innerHTML = "la valeur entée est" +"  " +err;
+</script>
+<p>52) execution du code après try et catch quel qu'en soit le resultat</p>
+<p>veuillez entrer un nombre entre 1 et 10:</p>
+<input id="demo52" type="text">
+<button type="button" onclick="fonction52()" >tester la valeur entrée</button>
+<p id="message52"></p>
+<script>
+    function fonction52(){
+        var message52, x;
+        message52 = document.getElementById("message52");
+        message52.innerHTML = " ";
+        x = document.getElementById("demo52").value;
+        try{
+            if (x == "") throw "vous n'avez rien saisie";
+            if (x === 5) throw "bravo vous aver entrer la moitiée de 10";
+            if (isNaN(x)) throw "vous n'avez pas saisie un nombre";
+            x = Number(x);
+            if (x < 5) throw "très prtite";
+            if (x > 10) throw "très grande";
+        }
+        catch (err){
+            message52.innerHTML = "la valeur entée est" +"  " +err;
+        }
+        finally{
+            document.getElementById("demo52").value = "";
+        }
     }
+</script>
+<p>53) erreur de reference js</p>
+<p>on ne peut pas use une variable inexistante</p>
+<p id="demo53"></p>
+<script>
+    var x;
+    try {
+        x= y+1;
+    }
+    catch(err){
+        document.getElementById("demo53").innerHTML = err.name;
+    }
+</script>
+<p>54) erreur de plage js</p>
+<p id="demo54"></p>
+<script>
+    var nombre = 1;
+    try {
+        nombre.toPrecision(500);
+    }
+    catch(err){
+        document.getElementById("demo54").innerHTML = err.name;
+    }
+</script>
+<p>55) erreur de syntaxe en js</p>
+<p id="demo55"></p>
+<script>
+    try {
+        eval("alert('hello");
+    }
+    catch(err){
+        document.getElementById("demo55").innerHTML = err.name;
+    }
+</script>
+<p>56) erreur de URI js</p>
+<p id="demo56"></p>
+<script>
+    try {
+        decodeURI("%%%");
+    }
+    catch(err){
+        document.getElementById("demo56").innerHTML = err.name;
     }
 </script>
 </body>
