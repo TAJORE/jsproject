@@ -89,7 +89,7 @@
     </ul>
 </head>
 <body>
-<p id="demo1">1) javascript peut changé un contenu html</p>
+p id="demo1">1) javascript peut changé un contenu html</p>
 
 <button type="button" onclick="document.getElementById('demo1').innerHTML =
 'hello js'"> cliquer ici</button>
@@ -145,7 +145,6 @@
         fullname : function (){
             return  this.nom_proprietaire + " "+ this.prenom_proprietaire;
         }
-
     };
     document.getElementById('demo10').innerHTML= "ce"+ " " + maison.type + " " + "contruit en" + maison.anne_construct +"appartient à monsieur " + " " + maison.fullname();
 </script>
@@ -219,7 +218,6 @@
 <script>
     var jours = ["lundi","mardi","mercredi","jeudi"];
     document.getElementById("demo19").innerHTML = jours;
-
     function fonction19 (){
         jours.push("vendredi");
         document.getElementById("demo19").innerHTML = jours;
@@ -240,7 +238,6 @@
     document.getElementById("demo21").innerHTML = jours;
     document.getElementById("demo22").innerHTML = jours.pop();
     document.getElementById("demo23").innerHTML = jours;
-
 </script>
 <p>24) utilisation de delete() sur les tableaux</p>
 <p id="demo24"></p>
@@ -331,7 +328,6 @@ Age: <input type="number" id="age" value="18">
     function checkfruit(){
         var text;
         var fruits = document.getElementById("monInput").value;
-
         switch (fruits){
             case "banane":
                 text = "la banane est bonne";
@@ -356,7 +352,6 @@ Age: <input type="number" id="age" value="18">
     function checkfruit(){
         var text;
         var voiture = document.getElementById("monInput2").value;
-
         switch (voiture){
             case "BMW":
                 text = "voiture allemande";
@@ -506,6 +501,51 @@ Age: <input type="number" id="age" value="18">
         var str = document.getElementById("demo48").innerHTML;
         var txt48 = str.replace("Microsoft","STC");
         document.getElementById("demo48").innerHTML= txt48;
+    }
+</script>
+<p>49)tester la présence d'une chaine de caractère dans une autre via test()</p>
+<p id="po1">ce qui se ressemble s'assemble</p>
+<button onclick="fonction49()">cliquer ici pour voir</button>
+<p id="demo49"></p>
+<script>
+    function fonction49(){
+        text49 = document.getElementById("po1").innerHTML;
+        document.getElementById("demo49").innerHTML = /e/.test(text49);
+    }
+</script>
+<p>50) rechercher une chaine de caractère dans une autre et renvoie de la chaine</p>
+<p id="po2">ce qui se ressemble s'assemble</p>
+<button onclick="fonction50()">cliquer ici pour voir</button>
+<p id="demo50"></p>
+<script>
+    function fonction50(){
+        text50 = document.getElementById("po2").innerHTML;
+        document.getElementById("demo50").innerHTML = /es/.exec(text50);
+
+    }
+</script>
+<p>51) gestion des erreurs en js</p>
+<p>veuillez entrer un nombre entre 1 et 10:</p>
+<input id="demo51" type="text">
+<button type="button" onclick="fonction51()" >tester la valeur entrée</button>
+<p id="message"></p>
+<script>
+    function fonction51(){
+    var message, x;
+    message = document.getElementById("message");
+    message.innerHTML = " ";
+    x = document.getElementById("demo51").value;
+    try{
+        if (x == "") throw "vous n'avez rien saisie";
+        if (x === 5) throw "bravo vous aver entrer la moitiée de 10";
+        if (isNaN(x)) throw "vous n'avez pas saisie un nombre";
+        x = Number(x);
+        if (x < 5) throw "très prtite";
+        if (x > 10) throw "très grande";
+    }
+    catch (err){
+        message.innerHTML = "la valeur entée est" +"  " +err;
+    }
     }
 </script>
 </body>
