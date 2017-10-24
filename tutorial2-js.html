@@ -649,6 +649,34 @@ Age: <input type="number" id="age" value="18">
         document.getElementById("demo58").innerHTML = txt58;
     }
 </script>
+<p>59) convertir un texte JSON en objet JS </p>
+<p id="demo59"></p>
+<script>
+    var  text59 = '{"employés":['+
+            '{"prénom": "jean","nom":"doe"},'+
+            '{"prénom": "anne","nom":"smith"},'+
+            '{"prénom": "innes","nom":"jonnes"}]}';
+    objet = JSON.parse(text59);
+    document.getElementById("demo59").innerHTML =
+            objet.employés[1].prénom + " " + objet.employés[1].nom;
+</script>
+<P>60) validation des formulaires</P>
+<script>
+    function validation_form(){
+        var x = document.forms["formulaire"]["fname"].value;
+        if (x==""){
+            alert("veuillez entrer un nom");
+            return false;
+        }else{
+            alert(" vous avez entrer" +"  " +x);
+        }
+    }
+</script>
+<form name ="formulaire" action="#"
+      onsubmit="return validation_form()" method="post">
+    Nom: <input type="text" name="fname">
+    <input type="submit" value="Soumèttre">
+</form>
 </body>
 <script src="tutorial2-js.js"></script>
 </html>
