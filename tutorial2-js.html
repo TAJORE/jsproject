@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <title>tuto2 js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="school.css" />
     <title>school project</title>
@@ -677,6 +679,362 @@ Age: <input type="number" id="age" value="18">
     Nom: <input type="text" name="fname">
     <input type="submit" value="Soumèttre">
 </form>
+<p>61) creation d'un objet avec NEW</p>
+<script>
+    var person = new Object();
+    person.firstName = "john";
+    person.ages = 50;
+</script>
+<p>62) création d'un objet avec le  constructeur</p>
+<p id="demo62"></p>
+<script>
+    function personne(first, last,age, eye){
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+    }
+    var mon_père = new personne("john", "Doe",50, "blue");
+    var ma_mère = new personne("sally", "chris",48,"green");
+    document.getElementById("demo62").innerHTML = "mon père a" +" "+ mon_père.age +"ans"+
+            + " .ma mère a" + " "+ ma_mère.age +"ans";
+</script>
+<p>63) accès aux  propriétés d'un objet avec la boucle for</p>
+<p id="demo63"></p>
+<script>
+    var texte63 = "";
+    var personne63 = {fname:"john", lname:"Doe", age:"30"};
+    var x;
+    for (x in personne63){
+        texte63 += personne63[x] + " ";
+    }
+    document.getElementById("demo63").innerHTML = texte63;
+</script>
+<p>64) suppression des propriétés d'un objet avec delete()</p>
+<p id="demo64"></p>
+<script>
+    var texte64 = "";
+    var personne64 = {fname:"john", lname:"Doe", age:"30"};
+    delete personne64.age;
+    var x;
+    for (x in personne64){
+        texte64 += personne64[x] + " ";
+    }
+    document.getElementById("demo64").innerHTML = texte64;
+</script>
+<p>65) les méthodes d'un objet</p>
+<p id="demo65"></p>
+<script>
+    var personne65 = {
+        prénom: "john",
+        nom: "konor",
+        id : 1521,
+        fullName: function (){
+            return this.prénom + " " + this.nom;
+        }
+    };
+    document.getElementById("demo65").innerHTML = personne65.fullName();
+</script>
+<p>66) affectation d'une nouvelle méthode à un objet</p>
+<p id="demo66"></p>
+<script>
+    function personne(first, last,age, eye){
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+    }
+    var mon_père = new personne("john", "Doe",50, "blue");
+    var ma_mère = new personne("sally", "chris",48,"green");
+
+    mon_père.name = function(){
+        return this.firstName + " " + this.lastName;
+    };
+    document.getElementById("demo66").innerHTML = "mon père s'appel:" +" "+ mon_père.name();
+</script>
+<p>67) ajout d'une nouvelle propriété à un prototype existant</p>
+<p id="demo67"></p>
+<script>
+    function personne(first, last,age, eye){
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+    }
+    personne.prototype.nationalité = "chinoise";
+    var mon_père = new personne("john", "Doe",50, "blue");
+    document.getElementById("demo67").innerHTML = "mon père est de nationalité:"
+            +" "+ mon_père.nationalité;
+</script>
+<p>68) ajout d'une nouvelle méthode à un prototype existant</p>
+<p id="demo68"></p>
+<script>
+    function personne(first, last,age, eye){
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+    }
+    personne.prototype.name = function(){
+        return this.firstName + " " + this.lastName;
+    };
+    var mon_père = new personne("john", "Doe",50, "blue");
+    document.getElementById("demo68").innerHTML = "mon père s'appel:"
+            +" "+ mon_père.name();
+</script>
+// les fonctions
+<p>69) le fonctions anonymes</p>
+<p>appel pour la multiplication (20000*30)</p>
+<p id="demo69"></p>
+<script>
+    var x = function(a,b){return a*b};
+    document.getElementById("demo69").innerHTML = x(20000,30);
+</script>
+<p>70) le constructeur des fonctions</p>
+<p>appel pour la multiplication (20000*30)</p>
+<p id="demo70"></p>
+<script>
+    var fonction70 =  new Function("a","b", "return a*b");
+    document.getElementById("demo70").innerHTML = fonction70(20000,30);
+</script>
+<p>71) fonctions s'auto-invoquant</p>
+<p id="demo71"></p>
+<script>
+    (function(){
+        document.getElementById("demo71").innerHTML = "bonjour je" +
+                " m'apelle moi meme étant une fonction";
+    })();
+</script>
+<p>72) retour d'une fonction en tant que chaine avec toString()</p>
+<p id="demo72"></p>
+<script>
+    function  fonction70(a,b){
+        return a.concat(b);
+    }
+    document.getElementById("demo72").innerHTML = fonction70.toString();
+</script>
+<p> 73)modification de la valeur par défaut d'une fonction</p>
+<p id="demo73"></p>
+<script>
+    function fonction73(x, y){
+        if (y === undefined){
+            y=0;
+        }
+        return x*y;
+
+    }
+    document.getElementById("demo73").innerHTML = fonction73(4);
+</script>
+<p> 74)recherche du max parmis plusieurs nombres avec une fonction qui preend en paramètre ces nombres</p>
+<p id="demo74"></p>
+<script>
+    function fonctionMax(){
+        var i;
+        var max = -Infinity;
+        var c = arguments.length;
+        for (i=0; i<c; i++ ){
+            if (arguments[i]>max){
+                max = arguments[i];
+            }
+        }
+        return max;
+
+    }
+    document.getElementById("demo74").innerHTML = fonctionMax(4,15,25,10,1,50);
+</script>
+<p> 75)fonction qui additionne tout les valeurs pris en paramètre</p>
+<p id="demo75"></p>
+<script>
+    function sommeAll(){
+        var i,somme=0;
+        var c = arguments.length;
+        for (i=0; i<c; i++ ){
+            somme += arguments[i];
+        }
+        return somme;
+    }
+    document.getElementById("demo75").innerHTML = sommeAll(4,15,25,10,1,50,2);
+</script>
+<p>76) utilisation d'une méthode d'un objet dans un autre objet avec call()</p>
+<p id="demo76"></p>
+<script>
+    var personne76 = {
+        prénom : "joel",
+        nom: "Doe" ,
+        fullName: function(){
+            return this.prénom + " "+ this.nom;
+        }
+
+    };
+    var monObjet = {
+        prénom : "jude",
+        nom: "Doe"
+    };
+    x = personne76.fullName.call(monObjet);
+    document.getElementById("demo76").innerHTML = x ;
+</script>
+<p>77) utilisation d'une méthode d'un objet dans un autre objet avec apply()</p>
+<p id="demo77"></p>
+<script>
+    var personne77 = {
+        prénom : "joel",
+        nom: "Doe" ,
+        fullName: function(){
+            return this.prénom + " "+ this.nom;
+        }
+
+    };
+    var monObjet = {
+        prénom : "jude",
+        nom: "Doe"
+    };
+    x = personne77.fullName.apply(monObjet);
+    document.getElementById("demo77").innerHTML = x ;
+</script>
+<p>78) retour du max avec Math.max()</p>
+<p id="demo78"></p>
+<script>
+    document.getElementById("demo78").innerHTML = Math.max(10.3,8,5,4);
+</script>
+<p>79) retour du max avec Math.max() et apply()</p>
+<p id="demo79"></p>
+<script>
+    document.getElementById("demo79").innerHTML = Math.max.apply(null,[10.3,8,5,4]);
+</script>
+<p>80) compteur avec une variable globale</p>
+<button onmouseover="fonction80()">placer le curseur ici pour conter!</button>
+<p id="demo80">0</p>
+<script>
+    var compteur = 0;
+    function add(){
+        return compteur +=1;
+    }
+    function fonction80(){
+        document.getElementById("demo80").innerHTML =add();
+    }
+</script>
+<p>81) fonctions imbriquée js</p>
+<p id="demo81"></p>
+<script>
+    document.getElementById("demo81").innerHTML =add();
+    function add(){
+        var compteur = 0;
+        function plus(){compteur +=1;}
+        plus();
+        return compteur;
+    }
+</script>
+<p>82) fermeture js</p>
+<button onmouseover="fonction82()">placer le curseur ici pour conter!</button>
+<p id="demo82">0</p>
+<script>
+    var add = (function(){
+        var compteur = 0;
+        return function(){return compteur +=1;}
+    })();
+    function fonction82(){
+        document.getElementById("demo82").innerHTML =add();
+    }
+</script>
+<p>83) les DOM</p>
+<p id="demo83"></p>
+<script>
+    document.getElementById("demo83").innerHTML = "hello world!";
+</script>
+<p>84) utilisation de getElementById pour afficher un texte</p>
+<p id="intro"> hello world!</p>
+<p id="demo84"></p>
+<script>
+    var mon_element = document.getElementById("intro");
+    document.getElementById("demo84").innerHTML = "le texte depuis le " +
+            "paragraphe de l'intro:" + " "+ mon_element.innerHTML;
+</script>
+<p>85) utilisation de <b>getElementByTagName</b> pour afficher un texte</p>
+<p id="demo85"></p>
+<script>
+    var x = document.getElementsByTagName("b");
+    document.getElementById("demo85").innerHTML = "le texte depuis la " +
+            "balise b:" + " "+ x[0].innerHTML;
+</script>
+<div id="main">
+    <p>le DOM est <b>très</b> utile</p>
+    <p>86) utilisation de <b>getElementByTagName</b> pour afficher un texte</p>
+</div>
+<p id="demo86"></p>
+<script>
+    var x = document.getElementById("main");
+    var y = x.getElementsByTagName("b");
+    document.getElementById("demo86").innerHTML = "le texte depuis la première  " +
+            "balise b de la div est:" + " "+ y[0].innerHTML;
+</script>
+<p class="intro87">le DOM est <b>très</b> utile</p>
+<p class="intro87">87) utilisation de <b>getElementByClassName
+</b> pour afficher un texte</p>
+<p id="demo87"></p>
+<script>
+    var x = document.getElementsByClassName("intro87");
+    document.getElementById("demo87").innerHTML = "le first paragraphe avec la classe " +
+            "intro87:" + " "+ x[0].innerHTML;
+</script>
+<p>88) utilisation de queryselector</p>
+<p class="intro88">le DOM est <b>très</b> utile</p>
+<p class="intro88">87) utilisation de <b>getElementByClassName
+</b> pour afficher un texte</p>
+<p id="demo88"></p>
+<script>
+    var x = document.querySelectorAll("p.intro88");
+    document.getElementById("demo88").innerHTML = "le deuxième paragraphe avec la classe " +
+            "intro87:" + " "+ x[1].innerHTML;
+</script>
+<p>89) recherche d'element HTML par collection  d'élément HTML</p>
+
+<form id="frm1" action="#">
+    Prénom : <input type="text" name="pname" value="Donald"><br>
+    Nom : <input type="text" name="name" value="Trump"><br><br>
+    <input type="submit" value="Valider">
+</form>
+<p>cliquer sur éssayer pour affiché les éléments du formulaire</p>
+<button onclick="fonction89()">Essayer!</button>
+<p id="demo89"></p>
+<script>
+    function fonction89() {
+        var x = document.forms["frm1"];
+        var texte89 = " ";
+        var i;
+
+        for (i = 0; i < x.length; i++) {
+
+            texte89 += x.elements[i].value + "<br>";
+        }
+        document.getElementById("demo89").innerHTML = texte89;
+    }
+</script>
+<p>90) affichage du titre du doc avec js</p>
+<p id="demo90"></p>
+<script>
+    document.getElementById("demo90").innerHTML = "le titre du tuto est  : "
+            + "  "+ document.title;
+</script>
+<p>91) utilisation de getelementbyid pour remplacé par un autre</p>
+<h1 id="id01">texte à remplacé</h1>
+<script>
+    var element = document.getElementById("id01");
+    element.innerHTML = "nouveau texte";
+</script>
+<p>92) changer l'attribut src d'une image</p>
+<img id="image" src="ban4.jpg" alt="ban" style="width: 100%">
+<script>
+    document.getElementById("image").src = "ban2.jpg";
+</script>
+<p>93) changer le style html avec js</p>
+<p id="p1">bonjour</p>
+<p id="p2">bonjour</p>
+<script>
+    document.getElementById("p2").style.color= "dashe";
+    document.getElementById("p2").style.color= "Arial";
+    document.getElementById("p2").style.color= "green";
+</script>
 </body>
 <script src="tutorial2-js.js"></script>
+<script src="school.js"></script>
 </html>
