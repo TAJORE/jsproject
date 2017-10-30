@@ -90,9 +90,8 @@
         </li>
     </ul>
 </head>
-<body>
+<body onload="checkCookies()">
 <p id="demo1">1) javascript peut changé un contenu html</p>
-
 <button type="button" onclick="document.getElementById('demo1').innerHTML =
 'hello js'"> cliquer ici</button>
 <p>2) javascript peur changé les attributs HTML</p>
@@ -988,7 +987,7 @@ Age: <input type="number" id="age" value="18">
 </script>
 <p>89) recherche d'element HTML par collection  d'élément HTML</p>
 
-<form id="frm1" action="#">
+<form id="frm1">
     Prénom : <input type="text" name="pname" value="Donald"><br>
     Nom : <input type="text" name="name" value="Trump"><br><br>
     <input type="submit" value="Valider">
@@ -1030,9 +1029,230 @@ Age: <input type="number" id="age" value="18">
 <p id="p1">bonjour</p>
 <p id="p2">bonjour</p>
 <script>
-    document.getElementById("p2").style.color= "dashe";
-    document.getElementById("p2").style.color= "Arial";
-    document.getElementById("p2").style.color= "green";
+    document.getElementById("p2").style.color= "blue";
+    document.getElementById("p2").style.fontFamily= "Arial";
+    document.getElementById("p2").style.fontSize= "larger";
+</script>
+<p>94) modification de la couleur d'un texte avec js </p>
+<h1 id="demo94"> texte à modifier</h1>
+<button type="button"
+        onclick="document.getElementById('demo94').style.color = 'red'">
+    cliquer ici  pour changer la couleur du texte
+</button>95) cacher un élément avec du js</p>
+<p id="demo95"> hello world!</p>
+<script>
+    document.getElementById("demo95").style.visibility = "hidden";
+</script>
+<p>96) les animations avec js</p>
+<p>
+    <button onclick="fonction96()">cliquer ici pour voir l'animation!</button>
+</p>
+<div id="conteneur96">
+    <div id="animation96">hello js</div>
+</div>
+<script>
+    function fonction96(){
+        var elem = document.getElementById("animation96");
+        var pos = 0;
+        var id = setInterval(frame, 5);
+        function frame(){
+            if (pos==150){
+                clearInterval(id);
+            }else{
+                pos++;
+                elem.style.top = pos + 'px';
+                elem.style.left = pos + 'px';
+            }
+        }
+    }
+</script>
+<p>97) reaction aux evenements</p>
+<h1 onclick="this.innerHTML = 'tuto js'">cliquer ici pour changer le texte</h1>
+<p>98) affectation des evenements avec le DOM</p>
+<button id="btn">essayer!</button>
+<p id="demo98"></p>
+<script>
+    document.getElementById("btn").onclick = displayDate;
+    function displayDate(){
+        document.getElementById("demo98").innerHTML= Date();
+    }
+</script>
+<P>99) utilisation de unload et uninload pour vérifier si le navigateur
+    supporte les cookies</P>
+<p id="demo99"></p>
+<script>
+    function checkCookies(){
+        var texte99= "";
+        if(navigator.cookieEnabled==true){
+            texte99 = "ce navigateur supporte les cookies";
+        }else{
+            texte99= "ce navigateur ne supporte pas les cookies";
+        }
+        document.getElementById("demo99").innerHTML = texte99;
+    }
+</script>
+<p>100) utilisation de l'évenement onchange</p>
+<script>
+    function fonction100(){
+        var x = document.getElementById("fname100");
+        x.value = x.value.toUpperCase();
+    }
+</script>
+Entrer votre Nom: <input type="text" id="fname100" onchange="fonction100()">
+<p>le texte saisi dans ce input est transformé en Upercase</p>
+<p>101) les evènements onmouseover et onmouseout</p>
+<div onmouseover="souris_sur(this)" onmouseout="souris_hors(this)"
+     style="background-color: #D94A38; width: 100%; height: 20px;padding: 40px;">
+    la souris sur moi
+</div>
+<script>
+    function souris_sur(obj){
+        obj.innerHTML = "Merci";
+    }
+    function souris_hors(obj){
+        obj.innerHTML = "la souris sur moi";
+    }
+</script>
+
+<p>101) les evènements onmousedown et onmouseup</p>
+<p>cliquer sur la div et maintenez</p>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+     style="background-color: #DA4A98; width: 50%; height: 20px;padding: 40px;">
+    cliquer sur moi
+</div>
+<script>
+    function mDown(obj){
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHTML = "relache moi stp";
+    }
+    function mUp(obj){
+        obj.style.backgroundColor = "#D94A38";
+        obj.innerHTML = "Merci";
+    }
+</script>
+<p>102) utilisation de onload</p>
+<script>
+    function fonction102(){
+        alert("Ce message a été déclenché à partir de l'événement onload");
+    }
+</script>
+<p>103)  utilisation de addeventlistener()</p>
+<button id="monbtn">essayer</button>
+<p id="demo103"></p>
+<script>
+    document.getElementById("monbtn").addEventListener("click", displayDate);
+    function displayDate(){
+        document.getElementById("demo103").innerHTML= Date();
+    }
+</script>
+<p>104)  utilisation de addeventlistener()</p>
+<button id="monbtn2">essayer</button>
+<script>
+    document.getElementById("monbtn2").addEventListener("click",
+            function () {alert("hello world")});
+</script>
+<p>105) ajout de plusieurs evenements à un element via addeventlistener</p>
+<button id="monbtn3">essayer</button>
+<script>
+    x = document.getElementById("monbtn3");
+    x.addEventListener("click", fonction105);
+    x.addEventListener("click", une_autre_fonction);
+
+    function  fonction105() {alert("hello world")}
+    function  une_autre_fonction() {alert("cette fonction " +
+            "s'execute aussi")}
+</script>
+<p>106) ajout de plusieurs evenements de type different à
+    un element via addeventlistener (cliquer, mettez la souris dessus ou enlevée)</p>
+<button id="monbtn4">essayer</button>
+<p id="demo106"></p>
+<script>
+    x = document.getElementById("monbtn4");
+    x.addEventListener("mouseover", fonction106);
+    x.addEventListener("click", deuxieme_fonction);
+    x.addEventListener("mouseout", troisieme_fonction);
+
+    function  fonction106() {
+        document.getElementById("demo106").innerHTML += "la souris au sessus!<br>";
+    }
+    function  deuxieme_fonction() {
+        document.getElementById("demo106").innerHTML += "cliquer!<br>";
+    }
+    function  troisieme_fonction() {
+        document.getElementById("demo106").innerHTML += "la souris hors!<br>";
+    }
+</script>
+<p>107) écouteur qui se déclanche quand on reduit la fenetre</p>
+<p> essayer de reduire la fentre pour apercevoir le changement</p>
+<p id="demo107"></p>
+<script>
+    window.addEventListener("resize",function(){
+        document.getElementById("demo107").innerHTML = Math.random();
+    });
+</script>
+<p>108) passage des paramètres avec addeventlistener</p>
+<button id="monbtn5">cliquer ic pour calculer 7*5</button>
+<p id="demo108"></p>
+<script>
+    var p1 = 5;
+    var p2 = 7;
+    document.getElementById("monbtn5").addEventListener("click",
+            function () {fonction108(p1, p2);});
+    function fonction108(a,b){
+        var resultat = a*b;
+        document.getElementById("demo108").innerHTML = resultat;
+    }
+</script>
+<p>109) propagation de bulle et propagation de capture</p>
+<div id="div109" class="div109">
+    <p id="p109"> cliquer sur ce paragraphe, propagation de bulle.</p>
+</div>
+<div id="div109_2" class="div109">
+    <p id="p109_2"> cliquer sur ce paragraphe, propagation de capture.</p>
+</div>
+<script>
+    document.getElementById("p109").addEventListener("click",
+            function () {alert("vous cliquer sur l'lélément p")},false);
+
+    document.getElementById("div109").addEventListener("click",
+            function () {alert("vous cliquer sur l'lélément div")},false);
+
+    document.getElementById("p109_2").addEventListener("click",
+            function () {alert("vous cliquer sur l'lélément p")},true);
+
+    document.getElementById("div109_2").addEventListener("click",
+            function () {alert("vous cliquer sur l'lélément div")},true);
+</script>
+<div id="div110">
+    déplacer le curseur sur cette div pour voir les différentes valeurs de math.random.
+    <p>cliquer sut le bouton pour arreter l'execution math.random</p>
+    <button onclick="removeHandler()" id="monbtn110">essayer pour voir</button>
+</div>
+<p id="demo110"></p>
+<script>
+    document.getElementById("div110").addEventListener("mousemove", fonction110);
+    function fonction110(){
+        document.getElementById("demo110").innerHTML = Math.random();
+    }
+    function removeHandler(){
+        document.getElementById("div110").removeEventListener("mousemove", fonction110);
+    }
+</script>
+<p>111)utilisation des noeuds pour copié le texte d'un tag(h1)
+    et le copié dans l'autre tag(p) </p>
+<h1 id="id011">ma première page</h1>
+<p id="id012"></p>
+<script>
+    document.getElementById("id012").innerHTML =
+            document.getElementById("id011").innerHTML;
+</script>
+<p>112)utilisation des noeuds pour copié le texte d'un tag(h1)
+    et le copié dans l'autre tag(p) </p>
+<h1 id="id013">ma première page</h1>
+<p id="id014"></p>
+<script>
+    document.getElementById("id014").innerHTML =
+            document.getElementById("id013").lastChild.nodeValue;
 </script>
 </body>
 <script src="tutorial2-js.js"></script>
