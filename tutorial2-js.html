@@ -1254,6 +1254,29 @@ Entrer votre Nom: <input type="text" id="fname100" onchange="fonction100()">
     document.getElementById("id014").innerHTML =
             document.getElementById("id013").lastChild.nodeValue;
 </script>
+<p>113)utilisation des noeuds pour copié le texte d'un tag(h1)
+    et le copié dans l'autre tag(p) </p>
+<h1 id="id015">ma première page</h1>
+<p id="id016"></p>
+<script>
+    document.getElementById("id016").innerHTML =
+            document.getElementById("id015").ChildNodes[0].nodeValue;
+</script>
+<p>114) utilisation de innerHTML pour afficher tout le boby du doc</p>
+<script>
+    alert(document.body.innerHTML);
+</script>
+<p>115) utilisation de document.documentElement pour afficher toute la page</p>
+<script>
+    alert(document.body.innerHTML);
+</script>
+<p>116) utilisation de NodeType</p>
+<h1 id="id017">ma première page</h1>
+<p id="id018"></p>
+<script>
+    document.getElementById("id018").innerHTML =
+            document.getElementById("id017").nodeType;
+</script>
 </body>
 <script src="tutorial2-js.js"></script>
 <script src="school.js"></script>
