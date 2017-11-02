@@ -1277,6 +1277,69 @@ Entrer votre Nom: <input type="text" id="fname100" onchange="fonction100()">
     document.getElementById("id018").innerHTML =
             document.getElementById("id017").nodeType;
 </script>
+<p>117) determination de la largeur et de la hauteru du navigateur</p>
+<p id="demo117"></p>
+<script>
+    var w = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+    var h = window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight;
+    var x = document.getElementById("demo117");
+    x.innerHTML = "ce navigateur a une largeur de  :" +w+ "px"+"  " +  "et une largeur de :"+ h+ ".";
+</script>
+<p>118) utilisation de windows.open()</p>
+<p id="demo118"></p>
+<script>
+    var x118= window.open();
+    document.getElementById("demo118").innerHTML = x118;
+</script>
+<p> 119) profondeur en couleur de l'écran</p>
+<p id="demo119"></p>
+<script>
+    document.getElementById("demo119").innerHTML = "cet écran utilise  :"
+            +screen.colorDepth + "bits";
+</script>
+<p> 120) profondeur en pixel de l'écran</p>
+<p id="demo120"></p>
+<script>
+    document.getElementById("demo120").innerHTML = "cet écran utilise  :"
+            +screen.pixelDepth + "bits";
+</script>
+<p>121) afficher l'url de la page en cours</p>*
+<p id="demo121"></p>
+<script>
+    document.getElementById("demo121").innerHTML = "l'url de cette page est  :" +
+            " "+ window.location.href;
+</script>
+<p>122) afficher le nom de l'hote</p>*
+<p id="demo122"></p>
+<script>
+    document.getElementById("demo122").innerHTML = "le nom d'hote  de cette page est  :" +
+            " "+ window.location.hostname;
+</script>
+<p>123) afficher le nom du protocole web utilisé</p>*
+<p id="demo123"></p>
+<script>
+    document.getElementById("demo123").innerHTML = "le nom du protocole web  de cette page est  :" +
+            " "+ window.location.protocol;
+</script>
+<p>124) afficher le numéro  de port d'hote de la page en cours</p>*
+<p id="demo124"></p>
+<script>
+    document.getElementById("demo124").innerHTML = "le numéro du port web  de cette page est  :" +
+            " "+ window.location.port;
+</script>
+<p>125) chargé un nouveau document</p>*
+<p id="demo125"></p>
+<input type="button" value="charger un nouveau doc" onclick="newDoc()">
+<script>
+    function newDoc(){
+        window.location.assign("https://funglobe.com")
+
+    }
+</script>
 </body>
 <script src="tutorial2-js.js"></script>
 <script src="school.js"></script>
