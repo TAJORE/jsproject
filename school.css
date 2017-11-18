@@ -1,4 +1,5 @@
 
+
 ul {
     list-style-type: none;
     margin: auto;
@@ -6,6 +7,7 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
+
 
 li {
     float: left;
@@ -109,14 +111,241 @@ li.dropdown {
    .div109{
        background-color: coral;
        border: 1px solid;
-       padding: 50px;
-       margin: 20px;
+       padding: 20px;
+       margin: 15px;
    }
 #div110{
     background-color: coral;
     border: 1px solid;
     padding: 50px;
     margin: 20px;
+    color: white;
+}
+#ban1{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 0;
+}
+#scrol1{
+    font-family: inherit;
+    font-size: 2em;
+    border-radius: 10px 5px 10px 5px;
+    color: #4B7011;
+    height: 1cm;
+}
+#main_index{
+  background-color: cadetblue;
+}
+.flex-container {
+    display: flex;
+}
+
+.div1{
+    background-color: #f1f1f1;
+    width: 210px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 50px 50px 50px 50px;
+}
+.img1{
+    width: 150px;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.div2 {
+    background-color: #f1f1f1;
+    width: 900px;
+    margin: 10px;
+    text-align: center;
+}
+.div3{
+    background-color: #f1f1f1;
+    width: 215px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 50px 50px 50px 50px;
+}
+.titre1{
+    font-size: 1.5em;
+    color: #4B7011;
+}
+.text2_div1{
+    border-radius: 5px 5px 5px 5px;
+    background-color: #760001;
+}
+#slide1 {
+    background: url(slide3.jpg) center 0 no-repeat fixed;
+    height: 189px;
+    width: 100%;
+}
+
+#slide2 {
+    background: url(ban4.jpg) center 0 no-repeat fixed;
+    height: 189px;
+    width: 100%;
+    padding-top: 1.5cm;
+    color: darkcyan;
+    font-size: 1.9em;
+    font-weight: bold;
+
+}
+
+#slide3 {
+    background: url(slide4.jpg) center 0 no-repeat fixed;
+    height: 200px;
+    width: 100%;
+    padding-top: 0.5cm;
+    font-size: 1.7em;
+    color: orange;
+    font-weight: bold;
+
+}
+.slide_inside{
+    text-align: center;
+}
+.text_slide_inside{
+    opacity: 2;
+    padding-top: 2.5cm;
+    color: darkcyan;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.text_inscription{
+    margin-top: 7cm;
+}
+.img2{
+    border-radius: 50%;
+}
+.div3_text{
+    background-color: dodgerblue;
+    border-radius: 50px 50px;
+    box-shadow: 5px 5px grey;
+}
+.deco{
+    text-decoration: none;
+}
+* {box-sizing:border-box}
+.mySlides {display:none}
+
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 20px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: yellowgreen;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+.hauteur1{
+    height: 310px;
+    width: 100%;
+}
+footer{
+    height: 250px;
+    background-color: black;
+    width: 100%;
+}
+.flex-container2 {
+    display: flex;
+
+}
+
+.flex-container2>div {
+    margin: 7px;
+    padding:7px;
+    width: 425px;
+    height: 230px;
     color: white;
 }
 

@@ -68,7 +68,7 @@
             </div>
         </li>
         <li class="dropdown">
-            <a  class="dropbtn"    href="oc-js.html" id="changer-couleur-tuto-oc"
+            <a  class="dropbtn"    href="oc-js.php" id="changer-couleur-tuto-oc"
                 onmouseover="tuto_oc(); reset_bg_sauf_tuto_oc()"
                 onclick="tuto_oc(); reset_bg_sauf_tuto_oc()">Tutoriel OC JS </a>
             <div class="dropdown-content">
@@ -80,18 +80,63 @@
     </ul>
 </head>
 <body>
+<button id="majPremier">Mise à jour première zone</button>
+<button id="majDeuxieme">Mise à jour de l'image</button>
+<button id="majquatrieme">Mise à jour deuxième zone</button><br /><br />
+<div id="premier">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
 
+<div id="deuxieme">
+    <img src="ban4.jpg">
+</div>
 
-<p>31) remplacé un element par un autre</p>
-<p id="demo31"> un peu de texte <a href="">  et un lien</a></p>
+<div id="troisieme">
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div>
+
+<div id="quatrieme">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+</div>
+
+<script src="jquery.js"></script>
 <script>
-    var lien = document.getElementsByTagName('a')[0];
-    var nouveaulabel = document.createTextNode('et un hyper lien');
+    $(function() {
+        $('#majPremier').click(function() {
+            $('#premier').load('maj1.html', function() {
+                alert('La première zone a été mise à jour');
+            });
+        });
 
-    lien.replaceChild(nouveaulabel, lien.firstChild);
+        $('#majDeuxieme').click(function() {
+            $('#deuxieme').load('maj2.html', function() {
+                alert('limage  a été mise à jour');
+            });
+        });
+        $('#majquatrieme').click(function() {
+            $('#quatrieme').load('maj1.html', function() {
+                alert('La troisème zone a été mise à jour');
+            });
+        });
+    });
 </script>
-
+<p> 2) utilisation d'ajax pour changer un texte</p>
+<p id="demo2">Ajax change ce texte</p>
+<button type="button" onclick="loadDoc()">changer le Contenu</button>
+<script>
+    function loadDoc(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status ==200){
+                document.getElementById("demo2").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("GET", "ajax_info_txt", true);
+        xhttp.send();
+    }
+</script>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="oc-js.js"></script>
 <script src="school.js"></script>
 </html>

@@ -174,3 +174,28 @@ function reset_bg_sauf_tuto_oc(){
     var element = document.getElementById("changer-couleur-tuto2");
     element.style.backgroundColor='#333';
 }
+
+    $(document).ready(function(){
+        $('#slide1').parallax("center", 0, 0.1, true);
+        $('#slide2').parallax("center", 900, 0.1, true);
+        $('#slide3').parallax("center", 2900, 0.1, true);
+    });
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+}

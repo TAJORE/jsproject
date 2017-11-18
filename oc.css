@@ -2,3 +2,8 @@
     background: blue;
     color: white;
 }
+
+ div { width: 400px; height: 300px; float: left; margin: 5px; }
+#premier { background-color: #F6E497; }
+#troisieme { background-color: #CAF1EC; }
+#quatrieme { background-color: #F1DBCA; }

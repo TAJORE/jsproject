@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+        <html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="inscription.css" />
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+<marquee behavior="" direction="">
+    <h1>Bienvenue à BTC-SUP  Incrivez-vous maintenant et commencez votre formation! </h1>
+</marquee>
+<div class="formulaire">
+    <form id="myForm">
+        <span class="form_col">Sexe:</span>
+        <label><input name="sex" type="radio" value="H" />Homme</label>
+        <label><input name="sex" type="radio" value="F" />Femme</label>
+        <br /><br />
+        <label class="form_col" for="lastName">Nom :</label>
+        <input name="lastName" id="lastName" type="text">
+        <span class="tooltip">Un nom ne peut pas faire moins de deux caractères</span>
+        <br /><br />
+        <label class="form_col" for="firstName">prénom :</label>
+        <input name="firstName" id="firstName" type="text">
+        <span class="tooltip">Un prénom ne peut pas faire moins de deux caractères</span>
+        <br /><br />
+        <label class="form_col" for="Emails">Email :</label>
+        <input name="Emails" id="Emails" type="email">
+        <span class="tooltip">Un email valide doit contenir obligatoirement @</span>
+        <br /><br />
+        <label class="form_col" for="age">Age :</label>
+        <input name="age" id="age" type="text" />
+        <span class="tooltip"> l'age doit etre compris entre 15 et 150</span>
+        <br /><br />
+        <label class="form_col" for="login">pseudo :</label>
+        <input name="login" id="login" type="text">
+        <span class="tooltip"> le pseudo ne peut pas faire moins de 4 caractères</span>
+        <br /><br />
+        <label class="form_col" for="pwd1">Mot de passe :</label>
+        <input name="pwd1" id="pwd1" type="password">
+        <span class="tooltip"> le mot de passe ne doit pas faire moins de 6 caractères</span>
+        <br /><br />
+        <label class="form_col" for="pwd2">Mot de passe(confirmation) :</label>
+        <input name="pwd2" id="pwd2" type="password">
+    <span class="tooltip"> le mot de passe de confirmation doit etre identique au
+        mot de passe d'origine</span>
+        <br /><br />
+        <label class="form_col" for="country">Pays :</label>
+        <select name="country" id="country">
+            <option value="en">Cameroun</option>
+            <option value="us">Etats-Unis</option>
+            <option value="us">Argentine</option>
+            <option value="us">Burundi</option>
+            <option value="fr">France</option>
+        </select>
+        <br /><br />
+        <span class="form_col"></span>
+        <label><input name="news" type="checkbox" /> je désire recevoir la newsletter
+            chaque mois</label>
+        <br /><br />
+        <span class="form_col"></span>
+        <input type="submit" value="M'inscrire"> <input type="reset" value="Réinitialiser le formulaire">
+    </form>
+</div>
+</body>
+<script src="inscription.js"></script>
+</html>

@@ -79,7 +79,7 @@
             </div>
         </li>
         <li class="dropdown">
-            <a  class="dropbtn"    href="Testquery.html"
+            <a  class="dropbtn"    href="TestJquery.html"
                 onmouseover="tuto_oc(); reset_bg_sauf_tuto_oc()"
                 onclick="tuto_oc(); reset_bg_sauf_tuto_oc()">Test Media Queries </a>
             <div class="dropdown-content">
@@ -1452,10 +1452,11 @@ Entrer votre Nom: <input type="text" id="fname100" onchange="fonction100()">
 </script>
 //ajax
 <p>136) changer un texte via ajax</p>
-<div id="demo136">
+
 <h2>l'objet HTTP Request</h2>
+<p id="demo136">AJAX change ce texte</p>
 <button type="button" onclick="loadDoc()">Changé le contenu</button>
-</div>
+
 <script>
     function loadDoc(){
         var xhttp = new XMLHttpRequest();
@@ -1464,7 +1465,7 @@ Entrer votre Nom: <input type="text" id="fname100" onchange="fonction100()">
                 document.getElementById("demo136").innerHTML = this.responseText;
             }
         };
-        xhttp.open("GET", "ajax_info.txt",true);
+        xhttp.open("GET", "ajax_info.txt", true);
         xhttp.send();
     }
 </script>
