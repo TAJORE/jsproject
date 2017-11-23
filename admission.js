@@ -1,3 +1,20 @@
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+});
+
+$(document).ready(function(){
+    $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+});
 
 function deactivateTooltips(){
     var tooltips = document.querySelectorAll('.tooltip'),
@@ -75,20 +92,3 @@ check['firstName'] =  check['lastName'];
 })();
 deactivateTooltips();
 
-$(document).ready(function(){
-    $("#flip").click(function(){
-        $("#panel").slideToggle("slow");
-    });
-});
-
-$(document).ready(function(){
-    $("#flip1").click(function(){
-        $("#panel1").slideToggle("slow");
-    });
-});
-
-$(document).ready(function(){
-    $("#flip2").click(function(){
-        $("#panel2").slideToggle("slow");
-    });
-});
