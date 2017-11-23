@@ -61,6 +61,20 @@ check['Email'] = function(){
         return false;
     }
 };
+check['Email2'] = function(){
+    var Email = document.getElementById('Email'),
+        Email2 = document.getElementById('Email2'),
+        tooltipStyle = getTooltip(Email2).style;
+    if (Email.value == Email2.value && Email2.value != ''){
+        Email2.className = 'correct';
+        tooltipStyle.display = 'none';
+        return true;
+    }else{
+        Email2.className = 'incorrect';
+        tooltipStyle.display = 'inline-block';
+        return false;
+    }
+};
 
 check['age'] = function(){
     var age = document.getElementById('age'),
@@ -122,10 +136,10 @@ check['pwd2'] = function(){
     }
 };
 
-check['country'] = function(){
-    var country = document.getElementById('county'),
-        tooltipTyle = getTooltip(country).style;
-    if (country.options[country.selectedIndex].value != 'none'){
+check['civility'] = function(){
+    var civility = document.getElementById('civility'),
+        tooltipTyle = getTooltip(civility).style;
+    if (civility.options[civility.selectedIndex].value != 'none'){
         tooltipTyle.display = 'none';
         return true;
     }else{
@@ -136,8 +150,7 @@ check['country'] = function(){
 
 (function(){
     var myForm = document.getElementById('myForm'),
-        inputs = document.querySelectorAll('input[type= text], input[type=password]'),
-        inputLength = inputs.length;
+        inputs = document.querySelectorAll('input[type= text], input[type=password]'), inputLength = inputs.length;
     for (var i= 0; i<inputLength; i++){
         inputs[i].addEventListener('keyup', function(e){
             check[e.target.id](e.target.id);

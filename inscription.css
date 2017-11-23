@@ -1,5 +1,5 @@
 body{
-    padding-top: 2px;
+    padding-top: 78px;
     background-color: floralwhite;
 }
 .form_col{
@@ -13,12 +13,12 @@ body{
 input{
     padding: 2px;
     border: 1px solid #ccc;
-    border-radius: 2px;
+    border-radius: 5px;
     outline: none;
 }
 input:focus{
     border-color: rgba(82, 168, 236, 0.75);
-    box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+    box-shadow: 0 0 18px rgba(82, 168, 236, 0.5);
 }
 .correct{
     border-color: rgba(68, 191, 68, 0.75);
@@ -39,10 +39,10 @@ input:focus{
     margin-left: 20px;
     padding: 2px 4px;
     border: 1px solid #555;
-    background-color: #ccc;
-    border-radius: 4px;
+    background-color: slategrey;
+    border-radius: 6px;
 }
-.formulaire{
+#formulaire{
     height: auto;
     width: 900px;
     background-color: lightgray;

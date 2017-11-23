@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formulaire d'inscription à BTC-SUP</title>
+    <link rel="stylesheet" href="inscription.css" />
+</head>
+<body>
+<form action="page.php" onsubmit="return verifForm(this)">
+    <p>
+        Pseudo : <input type="text" name="pseudo" onblur="verifPseudo(this)" /><br />
+        E-mail : <input type="text" name="email" size="30" onblur="verifMail(this)"/><br />
+        Âge : <input type="text" name="age" size="2" onblur="verifAge(this)" /> ans<br />
+        <input type="submit" value="Valider" />
+    </p>
+</form>
+</body>
+<script src="inscription.js"></script>
+</html>
