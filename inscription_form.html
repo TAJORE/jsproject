@@ -72,7 +72,7 @@
         <div class="candidature">
             <h2>Création de Compte</h2>
             <h3>Votre Compte</h3>
-            <div id="myForm">
+            <form id="myForm">
                 <label class="form_col" for="civility">Civilité :</label>
                 <select name="civility" id="civility">
                     <option value="none"> Selectionner votre Civilité</option>
@@ -83,15 +83,19 @@
                 <span class="tooltip">Merci de selectionner votre civilité</span>
                 <br /><br />
                 <label class="form_col" for="lastName">Nom :</label>
-                <input name="lastName" id="lastName" type="text"  size="30"/>
+                <input name="lastName" id="lastName" type="text"  size="30" onblur="ChangeCase(this);"/>
                 <span class="tooltip">Un nom ne peut pas faire moins de deux caractères</span>
                 <br /><br />
                 <label class="form_col" for="firstName">Prénom :</label>
-                <input name="firstName" id="firstName" type="text" size="30" />
+                <input name="firstName" id="firstName" type="text" size="30" onblur="ChangeCase(this);" />
                 <span class="tooltip">Un prénom ne peut pas faire moins de deux caractères</span>
                 <br /><br />
+                <label class="form_col" for="age">Âge :</label>
+                <input name="age" id="age" type="number" min="15"  max="100" size="30" />
+                <span class="tooltip">L'âge doit être compris entre 15 et 100</span>
+                <br /><br />
                 <label class="form_col" for="Email">Email :</label>
-                <input name="Email" id="Email" type="text" size="30" />
+                <input type="email" name="Email" size="30" id="Email"  />
                 <br>
                 <span class="tooltip">Une adresse email doit contenir obligatoirement @</span>
                 <br /><br />
@@ -100,21 +104,21 @@
                 <br>
                 <span class="tooltip">L'adresse email de confirmation doit etre identique à celui d'origine</span>
                 <br /><br />
-                <label class="form_col" for="Pdw1">Mot de passe :</label>
-                <input name="Pdw1" id="Pdw1" type="password" size="30" />
+                <label class="form_col" for="password">Mot de passe :</label>
+                <input name="Pdw1" id="password" type="password" size="30" />
                 <br>
                 <span class="tooltip">Un mot de passe  ne peut pas faire moins de six caractères</span>
                 <br /><br />
-                <label class="form_col" for="Pdw2">Mot de passe :</label>
-                <input name="Pdw2" id="Pdw2" type="password" size="30" />
+                <label class="form_col" for="confirm-password">Mot de passe (confirmation) :</label>
+                <input name="Pdw2" id="confirm-password" type="password" size="30" />
                 <br>
-    <span class="tooltip">le  mot de passe de confirmation doit etre identique
-        à celui d'origine</span>
+                <span class="tooltip">le  mot de passe de confirmation doit etre identique
+                à celui d'origine</span>
                 <br /><br />
                 <span class="form_col"></span>
-                <input class="bouton" type="submit" value="M'inscrire">
+                <input  id="check_submit" class="bouton" type="submit" value="M'inscrire">
                 <input class="bouton" type="reset" value="Réinitialiser le formulaire">
-            </div>
+            </form>
         </div>
     </div>
     <div class="flex2">
