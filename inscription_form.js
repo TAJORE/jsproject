@@ -159,6 +159,9 @@ check['civility'] = function(){
         var result = true;
         for (var i in check){
             result = check[i](i) && result;
+            if(result){
+                document.getElementsByClassName('bouton_validation').style.display= 'inline_block';
+            }
         }
         if (result){
             alert('le formulaire est bien rempli vous serez contacter plus tard!.');
