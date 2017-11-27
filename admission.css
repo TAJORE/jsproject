@@ -116,6 +116,7 @@ input:focus{
 }
 .incorrect{
     border-color: rgba(191, 68, 68, 0.75);
+    background-color: #FADCD9;
 }
 .incorrect:focus{
     border-color: rgba(191, 68, 68, 0.75);
@@ -123,11 +124,10 @@ input:focus{
 }
 .tooltip{
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 210px;
     padding: 2px 4px;
-    border: 1px solid #555;
-    background-color: slategrey;
     border-radius: 6px;
+    color: red;
 }
 .flex-container4 {
     display: flex;

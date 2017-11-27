@@ -2,51 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8544119-1bbc-4fc4-99c7-30c8b924d25e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\wamp64\www\school\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\ban8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\ico_epingle.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\bulle.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\flecheblanchedroite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\flickr.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\fond_degraderouge.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\fond_jaune.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\ico_epingle.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\ico_liensexterne.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\ico_top.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\ombre.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\photo1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\photo2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\photo3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\photo4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\rss.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\sanfrancisco.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\separateur.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\vimeo.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\zozor_classe.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\images\zozor_logo.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\pic_bulboff.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\pic_bulbon.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\slide2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\test2 - Copie.PNG" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\test2.PNG" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\test3 - Copie.PNG" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\test3.PNG" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\test4 - Copie.PNG" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\test4.PNG" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\test5 - Copie.PNG" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\test5.PNG" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\text1 - Copie.PNG" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\text1.PNG" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\tj1.PNG" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\zozor_classe.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp64\www\school\zozor_logo.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admission.css" afterPath="$PROJECT_DIR$/admission.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscription_form.html" afterPath="$PROJECT_DIR$/inscription_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inscription_form.js" afterPath="$PROJECT_DIR$/inscription_form.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test2.html" afterPath="$PROJECT_DIR$/test2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test2.js" afterPath="$PROJECT_DIR$/test2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="school.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,11 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="admission.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admission.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.1034483">
+              <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.963636">
-              <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+            <state vertical-scroll-proportion="-8.636364">
+              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -98,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription_form.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="inscription_form.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/inscription_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.4727273">
-              <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.55009454">
+              <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -110,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscription_form.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="inscription_form.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inscription_form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42882884">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.1034484">
+              <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -140,6 +108,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="inscription_form.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inscription_form.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="admission.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admission.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -158,14 +136,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/admission.css" />
         <option value="$PROJECT_DIR$/admission.html" />
         <option value="$PROJECT_DIR$/admission.js" />
         <option value="$PROJECT_DIR$/test2.js" />
         <option value="$PROJECT_DIR$/test2.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/inscription_form.html" />
         <option value="$PROJECT_DIR$/inscription_form.js" />
+        <option value="$PROJECT_DIR$/admission.css" />
+        <option value="$PROJECT_DIR$/inscription_form.html" />
       </list>
     </option>
   </component>
@@ -475,26 +453,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admission.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="153" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="235" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admission.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inscription_form.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -549,27 +511,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.963636">
-          <caret line="80" column="42" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+        <state vertical-scroll-proportion="-8.636364">
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscription_form.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inscription_form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1034484">
+          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admission.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1034483">
+          <caret line="118" column="30" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inscription_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.4727273">
-          <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.55009454">
+          <caret line="93" column="55" selection-start-line="93" selection-start-column="55" selection-end-line="93" selection-end-column="55" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inscription_form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42882884">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
